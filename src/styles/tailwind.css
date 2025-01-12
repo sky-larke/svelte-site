@@ -2,3 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Apply default sizing for images */
+img {
+    @apply h-8 w-8;  /* Set the height and width for images */
+  }
+  
+  /* Apply default sizing for SVGs */
+  svg {
+    @apply h-6 w-6;  /* Set the size for SVGs */
+  }

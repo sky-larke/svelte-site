@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
     import '../styles/tailwind.css';  // Import Tailwind CSS globally
-    import Header from '$lib/components/header.svelte';
+    import HeaderAlt from "$lib/components/blogheader.svelte";
 </script>
 
 <!-- Global meta tags, favicon, and other head elements -->
@@ -13,10 +13,11 @@
   <!-- Add other head elements like meta tags, CSS, etc. -->
 </svelte:head>
 
-<div class="min-h-64 min-w-80 p-6 rounded-xl border z-50 m-10">
-    <Header></Header>
+<HeaderAlt></HeaderAlt>
+<div class="min-h-64 min-w-80 p-4 rounded-xl border z-50 m-10">
     <slot></slot>
 </div>
+
 
 
 

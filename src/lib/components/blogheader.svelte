@@ -12,8 +12,8 @@
 
 
 
-<AppBar padding='p-6'>
-	<svelte:fragment slot="lead">(icon)</svelte:fragment>
+<AppBar style="border-bottom: 1px solid white">
+	<svelte:fragment slot="lead"><img src="assets/icon_360.png" alt="icon"/></svelte:fragment>
+  Erin Park
 	<svelte:fragment slot="trail"><LightSwitch></LightSwitch></svelte:fragment>
-	<svelte:fragment slot="headline"><h1 class="h1">Headline</h1></svelte:fragment>
 </AppBar>

@@ -11,8 +11,13 @@
       },
       {
         type: "folder",
+        name: "machinelearning",
+        files: [{ type: "file", name: "index.ts" }],
+      },{
+        type: "folder",
         name: "games",
         files: [{ type: "file", name: "index.ts" }],
+        expanded: true,
       },
       {
         type: "folder",

@@ -10,9 +10,7 @@
   }
 </script>
 
-
-
-<AppBar style="border-bottom: 1px solid white">
+<AppBar>
 	<svelte:fragment slot="lead"><img src="assets/icon_360.png" alt="icon"/></svelte:fragment>
   Erin Park
 	<svelte:fragment slot="trail"><LightSwitch></LightSwitch></svelte:fragment>

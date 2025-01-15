@@ -27,8 +27,8 @@
 <style>
     .screen-container {
         position: fixed;
-        top: 5vh;       /* 10% from the top of the viewport */
-        left: 5vw;      /* 10% from the left of the viewport */
+        top: 2.5vh;       /* 2.5% from the top of the viewport */
+        left: 5vw;      /* 5% from the left of the viewport */
         width: 90vw;     /* 80% of the viewport width */
         height: 90vh;    /* 80% of the viewport height */
         overflow: hidden; /* Hide anything that exceeds the box */
@@ -50,7 +50,7 @@
     
   </style>
   
-  <div class="screen-container bg-screen-400 border-2 border-surface-300 dark:border-surface-500" style="--padding: {padding}">
+  <div class="screen-container bg-screen-400 border-2 border-surface-400 dark:border-surface-500" style="--padding: {padding}">
     <HeaderAlt></HeaderAlt>
     <div class="content">
         <slot></slot>

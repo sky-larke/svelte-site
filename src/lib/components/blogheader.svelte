@@ -1,17 +1,9 @@
 <script lang="ts">
   import { LightSwitch, AppBar } from '@skeletonlabs/skeleton';
-						
-  // Reactive variable to track menu state
-  let menuOpen = false;
-
-  // Toggle menu function
-  function toggleMenu() {
-    menuOpen = !menuOpen;
-  }
+	
 </script>
 
-<AppBar>
-	<svelte:fragment slot="lead"><img src="assets/icon_360.png" alt="icon"/></svelte:fragment>
-  Erin Park
-	<svelte:fragment slot="trail"><LightSwitch></LightSwitch></svelte:fragment>
+<AppBar background="bg-error-300" class="pl-1 pr-1 relative">
+  <svelte:fragment slot="lead"><img src="assets/icon_360.png" alt="icon" class="fixed left-[9vw] z-50"/></svelte:fragment>
+  <svelte:fragment slot="trail"><LightSwitch class="fixed right-[9vw]"></LightSwitch></svelte:fragment>
 </AppBar>

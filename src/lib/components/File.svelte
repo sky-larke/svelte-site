@@ -1,5 +1,6 @@
 <script lang="ts">
     export let name;
+    import Underline from "$lib/components/underlineanim.svelte"
   </script>
   
   <span class=" w-fit">
@@ -20,7 +21,7 @@
         d="M16 13H8"
       /><path d="M16 17H8" /></svg
     >
-    {name}</span
+    <Underline>{name}</Underline></span
   >
   
   <style>

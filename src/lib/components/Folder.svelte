@@ -83,7 +83,7 @@
       padding: 0.2em 0 0 0.5em;
       margin: 0 0 0 0.5em;
       list-style: none;
-      border-left: 2px solid #555353;
+      border-left: 2px solid #7a738350;
     }
   
     li {

@@ -1,0 +1,13 @@
+---
+tags: 
+layout: blog
+title: svelte site
+---
+
+# {title}
+
+I used:
+- svelte-kit
+- tailwindcss
+- skeleton
+- mdsvex

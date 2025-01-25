@@ -23,8 +23,13 @@ const config = {
 	},
 	plugins: [
 		skeleton({
-      themes: { custom: [
-				myCustomTheme
+      themes: { 
+		preset: [
+			"modern",
+		],
+
+		custom: [
+				myCustomTheme, 
 			] }
     })
 	]

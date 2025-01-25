@@ -1,11 +1,10 @@
 <script lang="ts">
-    import HeaderAlt from "$lib/components/blogheader.svelte";
+    import Header from "$lib/components/header.svelte";
     import { onMount } from 'svelte';
 
     let windowWidth = 0;
     let isBrowser = false;
 
-    // This check ensures that we only access the window object in the browser.
     onMount(() => {
         isBrowser = typeof window !== 'undefined';  // Check if window exists
         if (isBrowser) {
@@ -20,21 +19,21 @@
 
     // Calculate padding based on screen width
     $: padding = isBrowser
-        ? windowWidth < 600 ? '1rem' : windowWidth < 1200 ? '1rem' : '2rem'
-        : '1rem'; // Default padding when SSR or no access to window
+        ? windowWidth < 600 ? '1.5rem' : windowWidth < 1200 ? '1.5rem' : '3rem'
+        : '1..5rem'; // Default padding when SSR or no access to window
 </script>
 
 <style>
     .screen-container {
         position: fixed;
-        top: 2.5vh;       /* 2.5% from the top of the viewport */
+        top: 5vh;       /* 2.5% from the top of the viewport */
         left: 5vw;      /* 5% from the left of the viewport */
         width: 90vw;     /* 80% of the viewport width */
         height: 90vh;    /* 80% of the viewport height */
         overflow: hidden; /* Hide anything that exceeds the box */
         
         box-sizing: border-box;
-        border-radius: 1rem; /* Rounded corners */
+        border-radius: 0rem; /* Rounded corners */
         z-index: 50; /* Make sure the box is on top */
       
     }
@@ -44,14 +43,13 @@
         margin-right: var(--padding);
         height: calc(100% - 4rem); /* Take up full height of the box but compensate for padding*/
         overflow: auto; /* Allow content to scroll */
-        padding: 1rem; /* Add inner padding to the content */
+        padding: var(--padding); /* Add inner padding to the content */
         box-sizing: border-box;
     }
     
   </style>
-  
-  <div class="screen-container bg-screen-400 border-2 border-surface-400 dark:border-surface-500" style="--padding: {padding}">
-    <HeaderAlt></HeaderAlt>
+  <div class="z-50 screen-container bg-primary-500/10 dark:bg-surface-500/10 border-2 border-surface-600 dark:border-primary-100" style="--padding: {padding}">
+    <Header></Header>
     <div class="content">
         <slot></slot>
       </div>

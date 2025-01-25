@@ -3,7 +3,29 @@
 	
 </script>
 
-<AppBar background="bg-error-300" class="pl-1 pr-1 relative">
-  <svelte:fragment slot="lead"><img src="assets/icon_360.png" alt="icon" class="fixed left-[9vw] z-50"/></svelte:fragment>
-  <svelte:fragment slot="trail"><LightSwitch class="fixed right-[9vw]"></LightSwitch></svelte:fragment>
+<AppBar 
+  gridColumns="grid-cols-[auto_1fr_auto]"
+  slotLead="place-content-start" 
+  slotTrail="place-content-end"
+  background="bg-primary-600/10" 
+  class="border-b-2 border-secondary-500/50 dark:border-primary-100/50
+  py-1 pl-4 pr-4 relative flex justify-between"
+  >
+  <svelte:fragment slot="lead">
+    <div class="flex items-center space-x-4">
+      <img 
+        src="assets/icon_360.png" 
+        alt="pixel portrait icon" 
+        class="rounded-md
+        border-1 border-secondary-500 dark:border-primary-100/50"
+        />
+      <p><slot></slot></p>
+    </div>
+  </svelte:fragment>
+  
+  <svelte:fragment slot="trail">
+    <div class="flex items-center space-x-4">
+      <LightSwitch></LightSwitch>
+    </div>
+  </svelte:fragment>
 </AppBar>

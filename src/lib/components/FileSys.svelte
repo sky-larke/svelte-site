@@ -41,10 +41,13 @@
       },
       {
         type: "folder",
-        name: "frontend",
-        files: [{ type: "file", name: "forager" }],
+        name: "design",
+        files: [
+          { type: "file", name: "forager" }, 
+          { type: "file", name: "transportle" }],
         expanded: true,
       },
+
       
     ];
   </script>

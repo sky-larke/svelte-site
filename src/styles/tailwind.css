@@ -12,3 +12,16 @@ img {
   svg {
     @apply h-6 w-6;  /* Set the size for SVGs */
   }
+
+/* Light mode styles */
+::selection {
+  @apply bg-primary-400;
+}
+
+/* Dark mode styles (with 'dark' class on parent) */
+html.dark ::selection {
+  @apply bg-primary-700;
+}
+
+
+  

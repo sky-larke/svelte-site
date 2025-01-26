@@ -1,8 +1,8 @@
 <script lang="ts">
     import { LightSwitch, AppBar } from '@skeletonlabs/skeleton'  
     import Socials from '$lib/components/socials.svelte'  
-    import Mobile from '$lib/components/mobile.svelte'
-    import Desktop from '$lib/components/desktop.svelte'
+    import Mobile from '$lib/components/utils/mobile.svelte'
+    import Desktop from '$lib/components/utils/desktop.svelte'
   </script>
 
 <AppBar 
@@ -13,7 +13,7 @@
     class="border-b-2 border-secondary-500/50 dark:border-primary-100/50
     py-1 pl-4 pr-4 relative flex justify-between"
     >
-    <svelte:fragment slot="lead">~</svelte:fragment>
+    <svelte:fragment slot="lead"><a href="/">~</a></svelte:fragment>
     <Mobile>
         <Socials></Socials>
     </Mobile>

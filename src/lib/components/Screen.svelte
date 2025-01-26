@@ -25,7 +25,6 @@
 
 <style>
     .screen-container {
-        position: fixed;
         top: 5vh;       /* 2.5% from the top of the viewport */
         left: 5vw;      /* 5% from the left of the viewport */
         width: 90vw;     /* 80% of the viewport width */
@@ -39,18 +38,18 @@
     }
     
     .content {
-        margin-left: var(--padding);
-        margin-right: var(--padding);
         height: calc(100% - 4rem); /* Take up full height of the box but compensate for padding*/
         overflow: auto; /* Allow content to scroll */
-        padding: var(--padding); /* Add inner padding to the content */
         box-sizing: border-box;
     }
     
   </style>
-  <div class="z-50 screen-container bg-primary-500/10 dark:bg-surface-500/10 border-2 border-surface-600 dark:border-primary-100" style="--padding: {padding}">
+  <div class="z-50 fixed screen-container 
+    bg-primary-500/10 dark:bg-surface-500/10 border-2 border-surface-600 dark:border-primary-100" style="--padding: {padding}">
     <Header></Header>
-    <div class="content">
+    <div class="content 
+        sm:py-12 p-3
+        sm:mx-12 mx-3">
         <slot></slot>
       </div>
 

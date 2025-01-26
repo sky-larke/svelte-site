@@ -1,8 +1,7 @@
 
 <script lang="ts">
-
     import Hero from "$lib/components/Hero.svelte"
-    import Underline from "$lib/components/underlineanim.svelte"
+    import Underline from "$lib/components/utils/underlineanim.svelte"
 
     let name = "Erin Park"
     let title = "Computer Science Student"

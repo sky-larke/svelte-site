@@ -17,9 +17,10 @@
         src="assets/icon_360.png" 
         alt="pixel portrait icon" 
         class="rounded-md
-        border-1 border-secondary-500 dark:border-primary-100/50"
+        border-1 border-secondary-500 dark:border-primary-100/50
+        hover:scale-110 focus:scale-110"
         />
-      <p><slot></slot></p>
+      <p></p>
     </div>
   </svelte:fragment>
   

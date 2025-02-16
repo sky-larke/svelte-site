@@ -19,7 +19,11 @@ const config = {
 		)
 	],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				"icon-pink": "#ECB5C3"
+			}
+		},
 	},
 	plugins: [
 		skeleton({

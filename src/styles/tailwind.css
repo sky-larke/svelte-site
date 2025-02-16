@@ -5,7 +5,7 @@
 
 /* Apply default sizing for images */
 img {
-    @apply h-8 w-8;  /* Set the height and width for images */
+    @apply h-6 w-6;  /* Set the height and width for images */
   }
   
   /* Apply default sizing for SVGs */
@@ -22,6 +22,3 @@ img {
 html.dark ::selection {
   @apply bg-primary-700;
 }
-
-
-  

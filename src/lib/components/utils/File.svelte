@@ -1,6 +1,6 @@
 <script lang="ts">
     export let name;
-    import Underline from "$lib/components/underlineanim.svelte"
+    import Underline from "$lib/components/utils/underlineanim.svelte"
   </script>
   
   <span class=" w-fit">

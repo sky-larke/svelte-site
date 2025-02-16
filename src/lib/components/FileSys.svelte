@@ -1,6 +1,6 @@
 <script>
-    import Folder from "./Folder.svelte";
-    import File from "./File.svelte";
+    import Folder from "$lib/components/utils/Folder.svelte";
+    import File from "$lib/components/utils/File.svelte";
   
     let root = [
       {

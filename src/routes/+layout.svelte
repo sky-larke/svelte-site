@@ -1,7 +1,6 @@
 <script context="module" lang="ts">
     import '../styles/tailwind.css';  // Import Tailwind CSS globally
     import Screen from "$lib/components/Screen.svelte";
-    import HeaderAlt from "$lib/components/blogheader.svelte";
 </script>
 
 <!-- Global meta tags, favicon, and other head elements -->

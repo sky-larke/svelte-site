@@ -44,13 +44,14 @@
     }
     
   </style>
+
   <div class="z-50 fixed screen-container 
-    bg-primary-500/10 dark:bg-surface-500/10 border-2 border-surface-600 dark:border-primary-100" style="--padding: {padding}">
+    bg-primary-500/10 dark:bg-surface-500/10 border-2 border-surface-600 dark:border-primary-100 shadow" style="--padding: {padding}">
     <Header></Header>
-    <div class="content 
+    <main class="content 
         sm:py-12 p-3
         sm:mx-12 mx-3">
         <slot></slot>
-      </div>
+    </main>
 
   </div>

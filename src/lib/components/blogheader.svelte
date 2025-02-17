@@ -5,7 +5,7 @@
 
 <AppBar 
     background="bg-primary-600/10" 
-    class="border-b-2 border-secondary-500/50 dark:border-primary-100/50
+    class="fixed border-b-2 border-secondary-500/50 dark:border-primary-100/50
         py-1 px-4 relative flex justify-between"
     >
     

@@ -10,8 +10,9 @@
   slotDefault="place-self-center"
   slotTrail="place-content-end"
   background="bg-primary-600/10" 
-  class="border-b-2 border-secondary-500/50 dark:border-primary-100/50
-  py-1 pl-4 pr-4 relative flex justify-between"
+  class="absolute w-full
+    border-b-2 border-secondary-500/50 dark:border-primary-100/50
+    py-1 flex-start justify-between"
   >
   <svelte:fragment slot="lead">~</svelte:fragment>
   <Mobile>

@@ -1,6 +1,9 @@
 <script>
     import File from "./File.svelte";
     import { slide } from "svelte/transition";
+
+    import OpenFolder from '~icons/mdi/folder-open';
+    import ClosedFolder from '~icons/mdi/folder';
   
     export let expanded = false;
     export let name;
@@ -10,57 +13,34 @@
       expanded = !expanded;
     }
   </script>
-  
-  <button on:click={toggle} class='font-medium'>
-    {#if expanded}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-folder-open"
-        ><path
-          d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"
-        /></svg
-      >
-    {:else}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.4"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-folder"
-        ><path
-          d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
-        /></svg
-      >
-    {/if}
-    {name}
+
+  <div class="group z-10">
+  <button on:click={toggle} 
+    class='font-medium text-tertiary-600'>
+      {#if expanded}
+        <OpenFolder />
+      {:else}
+        <ClosedFolder />
+      {/if}
+      <div class="flex items-center gap-1 text-secondary-700
+      hover:font-semibold">{name}</div>
+    
   </button>
   
   {#if expanded}
-    <ul transition:slide={{ duration: 300 }}>
+    <ul transition:slide={{ duration: 300 }} class="border-l-2 border-l-primary-400" >
       {#each files as file}
         <li>
           {#if file.type === "folder"}
             <svelte:self {...file} />
           {:else}
-            <File {...file} />
+            <File name={file.name} icon={file.icon}/>
           {/if}
         </li>
       {/each}
     </ul>
   {/if}
+</div>
   
   <style>
     button {
@@ -74,16 +54,11 @@
       outline: none;
       background: transparent no-repeat;
     }
-    svg {
-      /* margin-bottom: 2px; */
-      border: none;
-      outline: none;
-    }
+    
     ul {
       padding: 0.2em 0 0 0.5em;
       margin: 0 0 0 0.5em;
       list-style: none;
-      border-left: 2px solid #7a738350;
     }
   
     li {

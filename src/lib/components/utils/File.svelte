@@ -1,27 +1,25 @@
 <script lang="ts">
-    export let name;
+    import MdiFile from '~icons/mdi/file?raw';
+    import LinkOut from '~icons/uil/external-link-alt?raw';
+    let {name="#", icon=MdiFile, link=""} = $props();
     import Underline from "$lib/components/utils/underlineanim.svelte"
   </script>
   
-  <span class=" w-fit">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.4"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="mt-px"
-      ><path
-        d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
-      /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M10 9H8" /><path
-        d="M16 13H8"
-      /><path d="M16 17H8" /></svg
-    >
-    <Underline>{name}</Underline></span
+  <span class=" w-fit z-10 text-tertiary-600">
+    {@html icon}
+    <div class="flex items-center gap-1 text-secondary-700"><Underline>
+      {#if name == "source code"}
+      <a href={link} target="_blank" rel="noopener noreferrer" class="flex flex-row">
+        {name}
+        </a> 
+      {:else if link != ""}
+        <a href={link} >
+        {name}
+        </a>
+      {:else}
+        {name}
+      {/if}
+    </Underline></div></span
   >
   
   <style>
@@ -29,6 +27,7 @@
       display: flex;
       align-items: center;
       gap: 2px;
+      font-size: 13px;
     }
   </style>
   

@@ -13,11 +13,12 @@
   <!-- Add other head elements like meta tags, CSS, etc. -->
 </svelte:head>
 
-
-
 <Screen>
-    <slot></slot>
+  <slot></slot>
 </Screen>
+
+
+
 
 
 

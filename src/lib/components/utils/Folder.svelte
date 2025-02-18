@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import File from "./File.svelte";
     import { slide } from "svelte/transition";
 
@@ -7,7 +7,7 @@
   
     export let expanded = false;
     export let name;
-    export let files;
+    export let files: any[] = [];
   
     function toggle() {
       expanded = !expanded;
@@ -23,7 +23,9 @@
         <ClosedFolder />
       {/if}
       <div class="flex items-center gap-1 text-secondary-700
-      hover:font-semibold">{name}</div>
+      hover:font-semibold">
+        {name}
+      </div>
     
   </button>
   

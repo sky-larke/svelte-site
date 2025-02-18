@@ -1,0 +1,24 @@
+[
+  {
+    "type": "folder",
+    "name": "(current)",
+    "files": [
+      {
+        "type": "file",
+        "name": "svelte site"
+      }
+    ],
+    "expanded": false
+  },
+  {
+    "type": "folder",
+    "name": "(games)",
+    "files": [
+      {
+        "type": "file",
+        "name": "svelte site"
+      }
+    ],
+    "expanded": false
+  }
+]

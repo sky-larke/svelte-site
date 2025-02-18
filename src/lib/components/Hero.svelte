@@ -3,13 +3,28 @@
     let name = "Erin Park"
     let title = "software engineer"
     let imgurl = "assets/icon.webp"
-    let desc = "My main interests are in user-focused design, such as front-end development, UI/UX design, etc. I also have a game design hobby, due to enjoying creation of art, writing, and coding. I'm from Seattle, unless you're from Seattle, in which case I am actually from half an hour away."
+    let desc = ""
     
     let defaultButton = "bg-primary-600/30 hover:bg-icon-pink focus-visible:bg-icon-pink"
     let customButton = "font-semibold hover:font-bold btn-sm flex-1 px-3 shadow shrink transition-all duration-200 ease-in-out transform hover:scale-110 focus-visible:scale-110"
-    let toggleButton = "bg-icon-pink hover:bg-icon-pink focus-visible:bg-icon-pink"
+    let toggleButton = "font-semibold bg-icon-pink hover:bg-icon-pink focus-visible:bg-icon-pink"
     let projects = $state("home");
+
     import FileSys from "$lib/components/FileSys.svelte"
+
+    let { hierarchy = []} = $props();
+
+    const source = `
+    
+    I'm from Seattle, unless you're from Seattle, in which case I am actually from half an hour away.
+    
+    I read a lot. Whatever the amount you're thinking, it's more. 
+            
+    Last book I read that I'm willing to talk about:
+    Book of the New Sun by Gene Wolfe
+    Recent Projects
+    `
+
 </script>
 
 <div class="flex sm:items-start max-w-full rounded-lg flex-col 
@@ -55,14 +70,18 @@
 
     <div class="flex flex-col order-2 items-start
         pt-2 sm:pt-10 sm:max-w-[90%] w-[90%]
-        flex-grow overflow-y-auto no-scrollbar
+        flex-grow overflow-y-auto overflow-x-hidden no-scrollbar
         sm:max-h-[80vh] max-h-[55vh]">
         {#if projects == "projects"}
-            <FileSys />
+            <FileSys {hierarchy}/>
         {:else if projects == "about"}
             {desc}
-        {:else}
-            1234
+            <p>Hi, I'm Erin. </p>
+            <p>My main interests are in user-focused design. I also have a game design hobby, due to enjoying creation of art, writing, and coding. I'm from Seattle, unless you're from Seattle, in which case I am actually from half an hour away."</p>
+        {:else}   
+            <div class="break-words">
+                {desc}
+            </div>
         {/if}
     </div>
 

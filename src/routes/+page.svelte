@@ -2,13 +2,16 @@
 <script lang="ts">
     import Hero from "$lib/components/Hero.svelte"
     import RootHeader from "$lib/components/RootHeader.svelte"
-    import FileSys from "$lib/components/FileSys.svelte"
+
+    /** @type {import('./$types').PageProps} */
+	let { hierarchy } = $props();
+
 </script>
 
 <RootHeader />
     <main class="content 
         sm:mx-12 mx-3 ">
-        <Hero />
+        <Hero {hierarchy}/>
     </main>
 
 

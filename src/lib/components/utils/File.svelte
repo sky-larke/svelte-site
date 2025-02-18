@@ -1,7 +1,6 @@
 <script lang="ts">
     import MdiFile from '~icons/mdi/file?raw';
-    import LinkOut from '~icons/uil/external-link-alt?raw';
-    let {name="#", icon=MdiFile, link=""} = $props();
+    let {name="", icon=MdiFile, link="#"} = $props();
     import Underline from "$lib/components/utils/underlineanim.svelte"
   </script>
   

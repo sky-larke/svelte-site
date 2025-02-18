@@ -16,14 +16,14 @@
 
   <div class="group z-10">
   <button on:click={toggle} 
-    class='font-medium text-tertiary-600'>
+    class='font-medium text-success-500'>
       {#if expanded}
         <OpenFolder />
       {:else}
         <ClosedFolder />
       {/if}
-      <div class="flex items-center gap-1 text-secondary-700
-      hover:font-semibold">
+      <div class="flex items-center gap-1 text-primary-900
+      hover:font-bold">
         {name}
       </div>
     

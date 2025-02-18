@@ -1,5 +1,5 @@
 <script>
-  let custombutton = "font-semibold bg-primary-600/30 btn-sm px-3 shadow shrink transition-transform duration-200 ease-in-out transform hover:scale-110 hover:bg-icon-pink hover:dark:bg-error-600 hover:underline focus:scale-110 focus:bg-icon-pink focus:dark:bg-error-600 focus:underline"
+  let custombutton = "font-semibold bg-primary-600/30 btn-sm px-3 shadow shrink transition-transform duration-200 ease-in-out transform hover:scale-110 hover:bg-secondary-500 hover:dark:bg-error-600 hover:underline focus:scale-110 focus:bg-secondary-500 focus:dark:bg-error-600 focus:underline"
 </script>
 
 

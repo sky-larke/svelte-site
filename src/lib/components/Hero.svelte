@@ -5,9 +5,9 @@
     let imgurl = "assets/icon.webp"
     let desc = ""
     
-    let defaultButton = "bg-primary-600/30 hover:bg-icon-pink focus-visible:bg-icon-pink"
+    let defaultButton = "bg-primary-600/40 hover:bg-secondary-500 focus-visible:bg-secondary-500"
     let customButton = "font-semibold hover:font-bold btn-sm flex-1 px-3 shadow shrink transition-all duration-200 ease-in-out transform hover:scale-110 focus-visible:scale-110"
-    let toggleButton = "font-semibold bg-icon-pink hover:bg-icon-pink focus-visible:bg-icon-pink"
+    let toggleButton = "font-semibold bg-secondary-500 hover:bg-secondary-500 focus-visible:bg-secondary-500"
     let projects = $state("home");
 
     import FileSys from "$lib/components/FileSys.svelte"
@@ -51,7 +51,7 @@
             <h2 class="text-sm h4 font-semibold dark:text-primary-600 text-primary-700 whitespace-nowrap">{title}</h2>
         
         <div class = "flex justify-center gap-2 pt-2">
-            <button aria-label="Projects"
+            <button aria-label="About"
                 type="button" 
                 class="{`${projects=="about" ? toggleButton : defaultButton}`}{customButton}"
                 onclick = {()=> projects = (projects =="about") ? "home" : "about"}

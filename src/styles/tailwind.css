@@ -15,7 +15,7 @@ img {
 
 /* Light mode styles */
 ::selection {
-  @apply bg-tertiary-400;
+  @apply bg-secondary-500;
 }
 
 /* add the code bellow */ 

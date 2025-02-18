@@ -12,22 +12,22 @@
     <a href={github}  target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <GithubIcon class="transition-transform duration-300 ease-in-out transform 
             hover:scale-110 hover:text-primary-700 hover:dark:text-primary-400
-        focus:scale-110 focus:text-primary-700 focus:dark:text-primary-400"></GithubIcon>
+            focus:scale-110 focus:text-primary-700 focus:dark:text-primary-400"></GithubIcon>
     </a>
 
 
     <a href={linkedin}  target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <LinkedIn class="transition-transform duration-300 ease-in-out transform 
-        hover:scale-110 hover:text-primary-700 hover:dark:text-primary-400
-        focus:scale-110 focus:text-primary-700 focus:dark:text-primary-400"></LinkedIn>
+        hover:scale-110 hover:text-tertiary-500 hover:dark:text-tertiary-600-400
+        focus:scale-110 focus:text-tertiary-600-700 focus:dark:text-tertiary-600-400"></LinkedIn>
     </a>
 
 
 
     <a href={email} target="_blank" rel="noopener noreferrer" aria-label="Email">
         <Mail class="transition-transform duration-300 ease-in-out transform 
-        hover:scale-110 hover:text-primary-700 hover:dark:text-primary-400
-        focus:scale-110 focus:text-primary-700 focus:dark:text-primary-400"
+        hover:scale-110 hover:text-warning-400 hover:dark:text-warning-400
+        focus:scale-110 focus:text-warning-400 focus:dark:text-warning-400"
         ></Mail>
     </a>
 </div>

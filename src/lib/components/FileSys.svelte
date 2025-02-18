@@ -57,7 +57,7 @@
 
     <div class="pb-2">Ask me about...</div>
  
-    <Folder name="my projects" files={hierarchy} expanded/>
+    <Folder name="my projects" files={root} expanded/>
     <File name="site source code" icon={SvelteFill} link="https://github.com/sky-larke/svelte-site"/>
     
 

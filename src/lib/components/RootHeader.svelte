@@ -11,7 +11,7 @@
   slotTrail="place-content-end"
   background="bg-primary-600/10" 
   class="absolute w-full
-    border-b-2 border-secondary-500/50 dark:border-primary-100/50
+    border-b-2 border-surface-400/50 dark:border-primary-100/50
     py-1 flex-start justify-between"
   >
   <svelte:fragment slot="lead">~</svelte:fragment>

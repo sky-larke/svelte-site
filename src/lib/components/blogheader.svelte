@@ -6,7 +6,7 @@
 <style lang="postcss">
     img {
     @apply h-6 w-6;  /* Set the height and width for images */
-  }
+    }
 </style>
 
 <AppBar 

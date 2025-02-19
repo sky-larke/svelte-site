@@ -72,5 +72,9 @@ time {
   @apply font-semibold text-primary-600
 }
 
+a{
+  @apply hover:text-primary-600
+}
+
 
 

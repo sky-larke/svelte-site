@@ -17,7 +17,7 @@
     >
     
     <svelte:fragment slot="lead">
-        <ol class="breadcrumb">     
+        <ol class="flex flex-wrap overflow-x-auto space-x-2">     
             <li class="crumb">
                 <a href="/" class="anchor"><img 
                     src="/assets/icon_360.png" 

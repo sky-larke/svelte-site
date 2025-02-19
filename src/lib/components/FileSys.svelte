@@ -17,18 +17,18 @@
         name: "machinelearning",
         files: [
             
-            { type: "file", name: "humanoidrobot" },
-            { type: "file", name: "kaggle" }, 
+            // { type: "file", name: "humanoidrobot" },
+            // { type: "file", name: "kaggle" }, 
         ],
       },{
         type: "folder",
         name: "games",
         files: [
-            { type: "file", name: "crystallarium", icon:Gem},
-            { type: "file", name: "idolShowdown", icon:GamePad},
-            { type: "file", name: "intervallic", icon:GamePad},
-            { type: "file", name: "songly", icon:GamePad},
-            { type: "file", name: "ChemQuest", icon:ChemQuest}
+            // { type: "file", name: "crystallarium", icon:Gem},
+            // { type: "file", name: "idolShowdown", icon:GamePad},
+            // { type: "file", name: "intervallic", icon:GamePad},
+            { type: "file", name: "songly", icon:GamePad, link: "projects/songly"},
+            { type: "file", name: "ChemQuest", icon:ChemQuest, link: "projects/chemquest"}
         ],
         expanded: false,
       },
@@ -36,10 +36,11 @@
         type: "folder",
         name: "backend",
         files: [
-            { type: "file", name: "distributedSystems" },
-            { type: "file", name: "srsim", icon:GamePad},
-            { type: "file", name: "f1telemetry" },
-            { type: "file", name: "searchEngine", icon:SearchIcon }],
+            // { type: "file", name: "distributedSystems" },
+            // { type: "file", name: "srsim", icon:GamePad},
+            // { type: "file", name: "f1telemetry" },
+            // { type: "file", name: "searchEngine", icon:SearchIcon }
+            ],
         expanded: false,
       },
       {
@@ -47,7 +48,8 @@
         name: "design",
         files: [
           { type: "file", name: "forager", link: "projects/oatmilk"}, 
-          { type: "file", name: "transportle" }],
+          // { type: "file", name: "transportle" }
+          ],
         expanded: false,
       },
       

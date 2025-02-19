@@ -4,10 +4,10 @@
     import Underline from "$lib/components/utils/underlineanim.svelte"
   </script>
   
-  <span class=" w-fit z-10 text-warning-400">
+  <span class=" w-fit z-10 text-warning-300">
     {@html icon}
     <div class="flex items-center gap-1 text-primary-900"><Underline>
-      {#if name == "source code"}
+      {#if name == "this site"}
       <a href={link} target="_blank" rel="noopener noreferrer" class="flex flex-row">
         {name}
         </a> 

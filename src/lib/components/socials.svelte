@@ -7,6 +7,11 @@
     let linkedin = "https://www.linkedin.com/in/erin--park/"
     let email = "mailto:erinpark2024@u.northwestern.edu"
 </script>
+<style lang="postcss">
+    img {
+    @apply h-6 w-6;  /* Set the height and width for images */
+  }
+</style>
 
 <div class="items-center flex space-x-3">
     <a href={github}  target="_blank" rel="noopener noreferrer" aria-label="GitHub">

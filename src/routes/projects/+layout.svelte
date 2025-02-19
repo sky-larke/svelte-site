@@ -1,6 +1,7 @@
 <script context="module" lang="ts">
-    import '../styles/tailwind.css';  // Import Tailwind CSS globally
     import Screen from "$lib/components/Screen.svelte";
-    import Tiptap from '$lib/Tiptap.svelte' // import tiptap globally
+    // import Tiptap from '$lib/Tiptap.svelte';
+    import BlogHeader from '$lib/components/BlogHeader.svelte';
 </script>
-<Tiptap />
+
+<slot></slot>

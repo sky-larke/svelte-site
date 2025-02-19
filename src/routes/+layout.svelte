@@ -1,8 +1,6 @@
-<script context="module" lang="ts">
-    import '../styles/tailwind.css';  // Import Tailwind CSS globally
-    import Screen from "$lib/components/Screen.svelte";
-
-</script>
+<script>import "../app.css";
+import '../styles/tailwind.css';  // Import Tailwind CSS globally
+import Screen from "$lib/components/Screen.svelte";</script>
 
 <!-- Global meta tags, favicon, and other head elements -->
 <svelte:head>

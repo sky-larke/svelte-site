@@ -36,7 +36,7 @@
           {#if file.type === "folder"}
             <svelte:self {...file} />
           {:else}
-            <File name={file.name} icon={file.icon}/>
+            <File name={file.name} icon={file.icon} link={file.link}/>
           {/if}
         </li>
       {/each}

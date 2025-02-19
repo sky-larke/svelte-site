@@ -46,7 +46,7 @@
         type: "folder",
         name: "design",
         files: [
-          { type: "file", name: "forager" }, 
+          { type: "file", name: "forager", link: "projects/oatmilk"}, 
           { type: "file", name: "transportle" }],
         expanded: false,
       },
@@ -54,11 +54,10 @@
     ];
     console.log('Received hierarchy:', hierarchy);
   </script>
-
     <div class="pb-2">Ask me about...</div>
- 
     <Folder name="my projects" files={root} expanded/>
-    <File name="site source code" icon={SvelteFill} link="https://github.com/sky-larke/svelte-site"/>
+    <File name="this site" icon={SvelteFill} link="https://github.com/sky-larke/svelte-site"/>
+
     
 
   

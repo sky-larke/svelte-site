@@ -5,7 +5,7 @@
 
 /* Apply default sizing for images */
 img {
-    @apply h-6 w-6;  /* Set the height and width for images */
+    @apply h-[300px] w-auto;  /* Set the height and width for images */
   }
   
   /* Apply default sizing for SVGs */
@@ -15,7 +15,7 @@ img {
 
 /* Light mode styles */
 ::selection {
-  @apply bg-secondary-500;
+  @apply bg-success-400;
 }
 
 /* add the code bellow */ 
@@ -30,3 +30,47 @@ img {
       scrollbar-width: none;  /* Firefox */
 }
 }
+h1 {
+  @apply h1 font-semibold
+}
+
+h2 {
+  @apply h2 font-semibold
+}
+
+h3 {
+  @apply h3 font-semibold
+}
+
+h4 {
+  @apply pt-6 font-semibold
+}
+
+p {
+  @apply py-2
+}
+
+blockquote {
+  @apply bg-primary-400/50 px-5 py-3 border-primary-700 rounded-sm border-l-2 text-primary-900
+}
+
+table {
+  @apply border-primary-700 my-5
+}
+
+thead {
+  @apply border-primary-500 border-b-2 
+}
+
+th {
+  @apply p-2 text-left
+}
+td {
+  @apply p-2 text-left
+}
+time {
+  @apply font-semibold text-primary-600
+}
+
+
+

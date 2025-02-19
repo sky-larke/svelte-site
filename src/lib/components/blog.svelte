@@ -1,5 +1,5 @@
 <script lang="ts">
-    import BlogHeader from '$lib/components/BlogHeader.svelte';
+    import BlogHeader from '$lib/components/blogheader.svelte';
     import Time from "svelte-time";
 
     export let title:string = "";

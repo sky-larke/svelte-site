@@ -5,7 +5,7 @@
 
 /* Apply default sizing for images */
 img {
-    @apply h-[300px] w-auto;  /* Set the height and width for images */
+    @apply max-h-[300px] w-auto;  /* Set the height and width for images */
   }
   
   /* Apply default sizing for SVGs */

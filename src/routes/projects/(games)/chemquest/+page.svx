@@ -13,8 +13,10 @@ tags:
 
 thumbnail: multiportrait.png
 path: "/assets/games/chemquest"
+layout: blog
 ---
-<img src ="{path}/lineup_large.png" alt = "Pixel art lineup of fantasy characters">
+
+<img src ="{path}/lineup_large.png" alt ="Pixel art lineup of fantasy characters">
 
 
 ChemQuest is a demo of a chemistry-inspired RPG game sponsored by the Design Thinking and Communication Program. Its site is [here](https://sites.google.com/u.northwestern.edu/chemquest/home).
@@ -39,7 +41,7 @@ The site has most of the relevant information about the process and research, bu
 ### Art for the game. 
 Here's the art dump.
 
-![Animation of a isometric hill bobbing up and down with a wizard shooting sparks at the top]("{path}/chemquest.gif")	
+<img src="{path}/chemquest.gif" alt="Animation of a isometric hill bobbing up and down with a wizard shooting sparks at the top" >
 
 I made this thing in 15 minutes in Procreate. Exported the gif incorrectly, so now I only have this low quality version because I lost the original files. 
 

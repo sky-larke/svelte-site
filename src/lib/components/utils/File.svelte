@@ -21,12 +21,18 @@
     </Underline></div></span
   >
   
-  <style>
+  <style lang="postcss">
     span {
       display: flex;
       align-items: center;
       gap: 2px;
       font-size: 13px;
     }
+
+
+    a {
+      @apply no-underline;
+    }
+
   </style>
   

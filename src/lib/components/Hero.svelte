@@ -3,7 +3,24 @@
     let name = "Erin Park"
     let title = "software engineer"
     let imgurl = "/assets/icon.webp"
-    let projects = $state("home");
+
+    import {writable} from "svelte/store";
+
+	function createPersistentStore(key: string, initial: string) {
+        const storedValue = localStorage.getItem(key) ?? initial;
+        const store = writable(storedValue);
+
+        store.subscribe(value => localStorage.setItem(key, value)); // Auto-save changes
+
+        return store;
+    }
+
+    export const projects = createPersistentStore("homePage", "home");
+
+    function toggleProjects() {
+        projects.update(value => (value === "projects" ? "home" : "projects"));
+    }
+    
     
     let defaultButton = "bg-primary-600/40 hover:bg-secondary-500 focus-visible:bg-secondary-500";
     let customButton = "font-semibold hover:font-bold btn-sm flex-1 px-3 shadow shrink transition-all duration-200 ease-in-out transform hover:scale-110 focus-visible:scale-110";
@@ -38,7 +55,7 @@
 </script>
 
 <!-- Parent container dynamically aligns based on state -->
-<div class="{heroContainer}{(projects === "home") ? "" : "sm:justify-start sm:items-start"}">
+<div class="{heroContainer}{($projects === "home") ? "" : "sm:justify-start sm:items-start"}">
     <!-- Profile section with dynamic positioning -->
     <div class="{profileContainer}"
     >
@@ -59,16 +76,16 @@
             <button 
                 aria-label="About"
                 type="button" 
-                class="{(projects == 'about' ? toggleButton : defaultButton) + ' ' + customButton}"
-                onclick={() => projects = (projects == "about") ? "home" : "about"}
+                class="{($projects == 'about' ? toggleButton : defaultButton) + ' ' + customButton}"
+                onclick={toggleProjects}
             >
                 About
             </button>
             <button 
                 aria-label="Projects"
                 type="button" 
-                class="{(projects == 'projects' ? toggleButton : defaultButton) + ' ' + customButton}"
-                onclick={() => projects = (projects == "projects") ? "home" : "projects"}
+                class="{($projects == 'projects' ? toggleButton : defaultButton) + ' ' + customButton}"
+                onclick={toggleProjects}
             >
                 Projects
             </button>
@@ -76,12 +93,12 @@
     </div>
 
     <!-- Content section -->
-    {#if projects != "home"}
-    <div class="{contentContainer}{projects === 'projects' || projects === 'about' ? 'opacity-100' : 'opacity-0'}"
+    {#if $projects != "home"}
+    <div class="{contentContainer}"
     >
-        {#if projects == "projects"}
+        {#if $projects == "projects"}
             <FileSys {hierarchy}/>
-        {:else if projects =="about"}
+        {:else if $projects =="about"}
             <p class="font-semibold font-size-md">Hi, I'm Erin.</p>
             <div class="break-words">{desc}</div>
 

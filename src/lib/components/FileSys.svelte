@@ -56,6 +56,13 @@
     ];
     console.log('Received hierarchy:', hierarchy);
   </script>
+
+
+<style lang="postcss"> 
+  a {
+    @apply no-underline;
+  }
+</style>
     <div class="pb-2">Ask me about...</div>
     <Folder name="my projects" files={root} expanded/>
     <File name="this site" icon={SvelteFill} link="https://github.com/sky-larke/svelte-site"/>

@@ -73,7 +73,7 @@ time {
 }
 
 a{
-  @apply hover:text-primary-600
+  @apply anchor hover:text-primary-600
 }
 
 

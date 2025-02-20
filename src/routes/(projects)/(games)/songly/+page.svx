@@ -29,6 +29,7 @@ Players: 1
 > As Songly traverses the board they collect musical objects and put them in their backpack. The backpack can fit five objects. The musical objects spawn randomly on the game board based on the level and goal. If Songly collects all of the objects in the correct order based on the goal and presses spacebar the music of the goal plays and then they win that level. 
 
 <img src = "{path}/brainstorm.png">
+
 Here's a bit of an example from our document for the goal of the game. 
 
 I did some visual design stuff with matching animation to 2D movement control in Unity, and some unity animator stuff. 

@@ -1,12 +1,6 @@
 [
   {
     "type": "folder",
-    "name": "current",
-    "files": [],
-    "expanded": false
-  },
-  {
-    "type": "folder",
     "name": "design",
     "files": [
       {
@@ -41,6 +35,12 @@
         "icon": "gamepad"
       }
     ],
+    "expanded": false
+  },
+  {
+    "type": "folder",
+    "name": "machine learning",
+    "files": [],
     "expanded": false
   }
 ]

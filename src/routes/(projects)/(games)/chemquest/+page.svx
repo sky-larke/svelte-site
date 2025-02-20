@@ -15,6 +15,7 @@ thumbnail: multiportrait.png
 path: "/assets/games/chemquest"
 layout: blog
 icon: magic
+draft: false
 ---
 
 <img src="{path}/chemquest.gif" alt="Animation of a isometric hill bobbing up and down with a wizard shooting sparks at the top" >

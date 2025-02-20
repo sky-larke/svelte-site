@@ -58,7 +58,7 @@ p {
 }
 
 blockquote {
-  @apply bg-primary-400/50 px-5 py-3 border-primary-700 rounded-sm border-l-2 text-primary-900
+  @apply bg-primary-400/50 px-5 py-5 border-primary-700 rounded-sm border-l-2 text-primary-900
 }
 
 table {

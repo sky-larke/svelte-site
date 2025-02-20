@@ -6,7 +6,7 @@
 <AppBar
     background="bg-primary-600/10"
     class="absolute w-full
-    border-b-2 border-surface-400/50
+    border-b-2 border-primary-800/50
     py-1 flex-start justify-between z-50"
 >
     <svelte:fragment slot="lead">
@@ -26,7 +26,7 @@
                 {#if i == breadcrumbs.length - 1}
                     <li class="crumb font-semibold">{crumb.label}</li>
                 {:else}
-                    <li class="crumb">
+                    <li class="crumb font-semibold">
                         {crumb.label}
                     </li>
                 {/if}

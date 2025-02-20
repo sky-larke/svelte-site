@@ -5,31 +5,38 @@
 
 /* Apply default sizing for images */
 img {
-    @apply max-h-[300px] w-auto;  /* Set the height and width for images */
-  }
-  
-  /* Apply default sizing for SVGs */
-  svg {
-    @apply h-6 w-6;  /* Set the size for SVGs */
-  }
+  @apply max-h-[300px] w-auto max-w-[60%] object-contain;
+  /* Set the height and width for images */
+}
+
+/* Apply default sizing for SVGs */
+svg {
+  @apply h-6 w-6;
+  /* Set the size for SVGs */
+}
 
 /* Light mode styles */
 ::selection {
   @apply bg-success-400;
 }
 
-/* add the code bellow */ 
+/* add the code bellow */
 @layer utilities {
+
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
-      display: none;
+    display: none;
   }
- /* Hide scrollbar for IE, Edge and Firefox */
+
+  /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
 }
-}
+
 h1 {
   @apply h1 font-semibold
 }
@@ -59,22 +66,21 @@ table {
 }
 
 thead {
-  @apply border-primary-500 border-b-2 
+  @apply border-primary-500 border-b-2
 }
 
 th {
   @apply p-2 text-left
 }
+
 td {
   @apply p-2 text-left
 }
+
 time {
   @apply font-semibold text-primary-600
 }
 
-a{
-  @apply anchor hover:text-primary-600
+a {
+  @apply anchor text-primary-600 hover:text-error-500
 }
-
-
-

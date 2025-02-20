@@ -2,48 +2,46 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const PROJECTS_DIR = 'src/routes/projects';  // Directory to scan for projects
+const PROJECTS_DIR = 'src/routes/(projects)';  // Directory to scan for projects
 const OUTPUT_PATH = 'static/projects.json'
 
 
+function traverse(p: string) {
+    const files = fs.readdirSync(p);
+    console.log("traversing", p, files);
+    const result: any[] = [];
 
-const files = fs.readdirSync(PROJECTS_DIR);
-
-const filteredFiles = files
-    .filter(file => file.endsWith('.svx'))
-    .map(file => {
-        const filePath = path.join(PROJECTS_DIR, file);
-        const fileContent = fs.readFileSync(filePath, 'utf-8');
-        const { data } = matter(fileContent);
-        return {
-            type: 'file',
-            name: data.title,
-        };  
-    });
-
-console.log('Generated JSON:', filteredFiles);
-
-
-// TODO: make this a more dynamic way to sort files. idk
-const folders = fs.readdirSync(PROJECTS_DIR);
-const rootStructure: any[] = [];
-
-for (const folder of folders) {
-    const folderPath = path.join(PROJECTS_DIR, folder);
-    if (fs.statSync(folderPath).isDirectory()) {
-        rootStructure.push({
-            type: 'folder',
-            name: folder,
-            files: filteredFiles,
-            expanded: false,
-        });
+    for (const file of files) {
+        const filePath = path.join(p, file);
+        if (file === '+page.svx') {
+            const { data } = matter(fs.readFileSync(filePath, 'utf-8'));
+            console.log(data)
+            return({
+                type: 'file',
+                name: data.title, // Use the directory name as the file name
+                link: path.basename(p),
+                icon: data.icon
+            });
+        }
+        else if (file.startsWith("(")) {
+            result.push({
+                type: 'folder',
+                name: file.replace(/[()]/g, ""),
+                files: traverse(filePath),
+                expanded: false,
+            });
+        } else if (fs.statSync(filePath).isDirectory()) {
+            result.push(traverse(filePath));
+        }
     }
+    return result;
 }
 
-console.log(rootStructure)
 
+const rootStructure = traverse(PROJECTS_DIR)
 
 fs.writeFileSync(OUTPUT_PATH, JSON.stringify(rootStructure, null, 2));
 console.log('Projects JSON generated at', OUTPUT_PATH);
+console.log(JSON.stringify(rootStructure))
 
 

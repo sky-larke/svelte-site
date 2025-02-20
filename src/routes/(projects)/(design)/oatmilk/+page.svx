@@ -14,6 +14,7 @@ tags:
 thumbnail: "logo.png"
 path: "/assets/design/oatmilk"
 layout: blog
+icon: tree
 ---
 
 <img src="{path}/logo.png" alt="Image of home screen of an mobile app called 'Forager' with a squirrel icon">

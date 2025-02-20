@@ -16,7 +16,7 @@
     }
   </style>
 
-  <div class="relative screen-container 
+  <div class="absolute screen-container 
     bg-primary-500/10 dark:bg-surface-500/10 
     border-2 border-surface-600 dark:border-primary-100 shadow" 
     >

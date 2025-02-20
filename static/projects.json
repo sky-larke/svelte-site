@@ -1,33 +1,44 @@
 [
   {
     "type": "folder",
-    "name": "(current)",
+    "name": "current",
+    "files": [],
+    "expanded": false
+  },
+  {
+    "type": "folder",
+    "name": "design",
     "files": [
       {
         "type": "file",
-        "name": "svelte site"
+        "name": "Forager",
+        "link": "oatmilk",
+        "icon": "tree"
       }
     ],
     "expanded": false
   },
   {
     "type": "folder",
-    "name": "(design)",
+    "name": "games",
     "files": [
       {
         "type": "file",
-        "name": "svelte site"
-      }
-    ],
-    "expanded": false
-  },
-  {
-    "type": "folder",
-    "name": "(games)",
-    "files": [
+        "name": "ChemQuest",
+        "link": "chemquest",
+        "icon": "magic"
+      },
       {
         "type": "file",
-        "name": "svelte site"
+        "name": "crystallarium",
+        "link": "crystallarium",
+        "icon": "gem"
+      },
+      {
+        "type": "file",
+        "name": "Songly",
+        "link": "songly",
+        "icon": "gamepad"
       }
     ],
     "expanded": false

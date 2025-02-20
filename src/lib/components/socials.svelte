@@ -9,8 +9,12 @@
 </script>
 <style lang="postcss">
     img {
-    @apply h-6 w-6;  /* Set the height and width for images */
-  }
+        @apply h-6 w-6;  /* Set the height and width for images */
+    }
+
+    a {
+        @apply text-surface-900
+    }
 </style>
 
 <div class="items-center flex space-x-3">

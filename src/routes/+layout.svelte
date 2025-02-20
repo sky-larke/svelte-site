@@ -1,6 +1,11 @@
-<script>import "../app.css";
-import '../styles/tailwind.css';  // Import Tailwind CSS globally
-import Screen from "$lib/components/Screen.svelte";</script>
+<script lang="ts">
+  import "../app.css";
+  import '../styles/tailwind.css';  // Import Tailwind CSS globally
+  import Screen from "$lib/components/Screen.svelte";
+  import { fade } from 'svelte/transition';
+  import { page } from "$app/state";
+
+</script>
 
 <!-- Global meta tags, favicon, and other head elements -->
 <svelte:head>
@@ -11,9 +16,19 @@ import Screen from "$lib/components/Screen.svelte";</script>
   <title>Erin Park's Personal Site</title>
   <!-- Add other head elements like meta tags, CSS, etc. -->
 </svelte:head>
-<Screen>
-  <slot></slot>
-</Screen>
+
+{#key page.url}
+  <Screen>
+    <div class="ease-in-out"
+    in:fade={{ duration: 100}}
+    out:fade={{ duration: 100 }}
+    >
+      <slot />
+    </div>
+  </Screen>
+{/key}
+
+
 
 
 

@@ -13,6 +13,7 @@ tags:
 thumbnail: thumbnails/Songly_Walk.gif
 path: "/assets/games/songly"
 layout: blog
+icon: gamepad
 ---
 <img src = "{path}/Songly_Promo-export.gif" alt = "Small blob wearing a backpack yoinks a music note. Logo that reads 'Songly' drops down from above, and then disappears. The note grows back like a plant; this gif is a loop.">
 

@@ -1,7 +1,7 @@
 ---
 title: "ChemQuest"
+subtitle: an educational chemistry-inspired RPG
 date: 2021-06-09
-featured: true
 categories: 
   - Project
   - Completed
@@ -14,9 +14,10 @@ tags:
 thumbnail: multiportrait.png
 path: "/assets/games/chemquest"
 layout: blog
+icon: magic
 ---
 
-<img src ="{path}/lineup_large.png" alt ="Pixel art lineup of fantasy characters">
+<img src="{path}/chemquest.gif" alt="Animation of a isometric hill bobbing up and down with a wizard shooting sparks at the top" >
 
 
 ChemQuest is a demo of a chemistry-inspired RPG game sponsored by the Design Thinking and Communication Program. Its site is [here](https://sites.google.com/u.northwestern.edu/chemquest/home).
@@ -36,14 +37,16 @@ The site has most of the relevant information about the process and research, bu
 
 > We approached our task from a user-centered perspective, aiming to create a game that appealed to students with little familiarity with chemistry and video game... We also conducted multiple rounds of testing with three mockups to identify the game med ium (i.e. board games, card games, video games) that most effectively engaged our users. 
 
-> Our final design is a role-playing virtual game called ChemQuest, which was created using the game engine RPG Maker MZ. The design has four main components: (1) A narrative plot-line, (2) accessible aesthetic design, (3) a turn-based RPG battle system, (4) an interactive chemistry-themed world. The design primarily utilizes indirect chemistry, as students are exposed to the names of common molecules, periodic groups and their properties, and other chemistry-related vocabulary terms. The narrative plot-line and interactive world provide a clear sense of progression for the users, which keeps the students engaged with the game. This engagement also leads to a positive association with the subject of chemistry. As a role-playing game, ChemQuest encourages the player to identify with their chosen character, and the game's accessible design allows for users of all backgrounds to feel represented. Aesthetically pleasing graphics keep the game fresh and exciting for students as they progress through the game. The game interface is also easily customizable, which supports children of differing abilities. Finally, the turn-based battle system subtly encourages users to practice their chemistry knowledge, as students must draw upon their understanding of periodic groups to defeat science-themed enemies in fantastical battles. Ultimately, ChemQuest is carefully imbued with chemistry content to produce an immersive, engaging learning experience.
+> Our final design is a role-playing virtual game called ChemQuest, which was created using the game engine RPG Maker MZ. The design has four main components: 
+* (1) A narrative plot-line, 
+* (2) accessible aesthetic design, 
+* (3) a turn-based RPG battle system, 
+* (4) an interactive chemistry-themed world. 
+
+The design primarily utilizes indirect chemistry, as students are exposed to the names of common molecules, periodic groups and their properties, and other chemistry-related vocabulary terms. The narrative plot-line and interactive world provide a clear sense of progression for the users, which keeps the students engaged with the game. This engagement also leads to a positive association with the subject of chemistry. As a role-playing game, ChemQuest encourages the player to identify with their chosen character, and the game's accessible design allows for users of all backgrounds to feel represented. Aesthetically pleasing graphics keep the game fresh and exciting for students as they progress through the game. The game interface is also easily customizable, which supports children of differing abilities. Finally, the turn-based battle system subtly encourages users to practice their chemistry knowledge, as students must draw upon their understanding of periodic groups to defeat science-themed enemies in fantastical battles. Ultimately, ChemQuest is carefully imbued with chemistry content to produce an immersive, engaging learning experience.
 
 ### Art for the game. 
 Here's the art dump.
-
-<img src="{path}/chemquest.gif" alt="Animation of a isometric hill bobbing up and down with a wizard shooting sparks at the top" >
-
-I made this thing in 15 minutes in Procreate. Exported the gif incorrectly, so now I only have this low quality version because I lost the original files. 
 
 <img src ="{path}/lineup_large.png" alt = "Pixel art lineup of fantasy characters">
 
@@ -57,8 +60,7 @@ These are some character dialogue portraits. The bottom left one is somewhat bas
 
 I made a character sheet off of my favorite portrait. Never got to present this, but thought it was a cool concept. 
 
-<img src ="{path}/DenizSmall.png" alt = "Portrait of a man with luscious, long locks of hair, a jaunty feathered hat, and a blue bandanna scarf. He also has a cutlass." >
-<img src ="{path}/FrancescoPortrait.png" alt = "Portrait of a red-haired man in black armor. He is holding a spear and staring straight ahead, for he is a mechanical engineering major and life is suffering.">
+<div class="flex flex-row justify-start"><img src ="{path}/DenizSmall.png" alt = "Portrait of a man with luscious, long locks of hair, a jaunty feathered hat, and a blue bandanna scarf. He also has a cutlass." ><img src ="{path}/FrancescoPortrait.png" alt = "Portrait of a red-haired man in black armor. He is holding a spear and staring straight ahead, for he is a mechanical engineering major and life is suffering."></div>
 
 Here are the villains, Deniz the Menace & Francesco. You can play as them too if you want. Evil is just a matter of perspective. Also did these portraits in Procreate.
 

@@ -1,0 +1,6 @@
+---
+title: crystallarium
+layout: blog
+icon: gem
+path: "/assets/games/crystallarium"
+---

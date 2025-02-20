@@ -4,14 +4,12 @@
     import RootHeader from "$lib/components/RootHeader.svelte"
 
     /** @type {import('./$types').PageProps} */
-	let { hierarchy } = $props();
-
 </script>
 
-<RootHeader />
+    <RootHeader />
     <main class="content 
         sm:mx-12 mx-3 ">
-        <Hero {hierarchy}/>
+        <Hero />
     </main>
 
 

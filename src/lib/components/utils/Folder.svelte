@@ -8,7 +8,6 @@
     export let expanded = false;
     export let name;
     export let files: any[] = [];
-  
     function toggle() {
       expanded = !expanded;
     }
@@ -34,7 +33,7 @@
       {#each files as file}
         <li>
           {#if file.type === "folder"}
-            <svelte:self {...file} />
+          <svelte:self {...file} />
           {:else}
             <File name={file.name} icon={file.icon} link={file.link}/>
           {/if}

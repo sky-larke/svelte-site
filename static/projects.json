@@ -40,7 +40,14 @@
   {
     "type": "folder",
     "name": "machine learning",
-    "files": [],
+    "files": [
+      {
+        "type": "file",
+        "name": "Kaggle",
+        "link": "edX",
+        "icon": null
+      }
+    ],
     "expanded": false
   }
 ]

@@ -1,0 +1,12 @@
+---
+title: Kaggle 
+date: 2024-08-30
+categories: 
+  - Project
+tags:
+  - Machine Learning
+path: ""
+thumbnail: 
+layout: blog
+icon: 
+---

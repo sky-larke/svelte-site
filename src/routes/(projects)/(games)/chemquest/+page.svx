@@ -7,19 +7,16 @@ categories:
   - Completed
 tags:
   - Game Dev
+  - Gamemaker Studio
   - Art
   - Design
   - Engineering
-
-thumbnail: multiportrait.png
-path: "/assets/games/chemquest"
+path: /assets/games/chemquest
+thumbnail: chemquest.gif
 layout: blog
 icon: magic
 draft: false
 ---
-
-<img src="{path}/chemquest.gif" alt="Animation of a isometric hill bobbing up and down with a wizard shooting sparks at the top" >
-
 
 ChemQuest is a demo of a chemistry-inspired RPG game sponsored by the Design Thinking and Communication Program. Its site is [here](https://sites.google.com/u.northwestern.edu/chemquest/home).
 

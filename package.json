@@ -9,7 +9,7 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"generate:projects": "node static/generateLayout.ts"
+		"generate:projects": "node src/lib/generateLayout.ts"
 	},
 	"devDependencies": {
 		"@iconify/json": "^2.2.299",

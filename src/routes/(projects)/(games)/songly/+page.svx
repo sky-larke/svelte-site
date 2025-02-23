@@ -2,6 +2,7 @@
 title: "Songly"
 subtitle: PIE Game Jam
 date: 2022-01-30
+parent: games
 tech:
   - Unity
   - C#

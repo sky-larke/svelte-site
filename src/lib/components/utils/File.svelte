@@ -1,9 +1,10 @@
 <script lang="ts">
-  import MdiFile from "~icons/mdi/file?raw";
-  let { name = "", icon, link = "#", tech=[], topics=[]} = $props();
+  let { name = "", icon, link = "#", tech = [], topics = [] } = $props();
+
   import Underline from "$lib/components/utils/underlineanim.svelte";
   import FileTags from "$lib/components/utils/FileTags.svelte";
-  
+
+  import MdiFile from "~icons/mdi/file?raw";
   import SvelteFill from "~icons/ri/svelte-fill?raw";
   import SearchIcon from "~icons/material-symbols/search?raw";
   import GamePad from "~icons/mdi/gamepad-variant?raw";
@@ -12,21 +13,21 @@
   import Tree from "~icons/mdi/pine-tree?raw";
 
   const iconMap: Record<string, any> = {
-    "svelte": SvelteFill,
-    "search": SearchIcon,
-    "gamepad": GamePad,
-    "magic": ChemQuest,
-    "gem": Gem,
-    "tree": Tree
+    svelte: SvelteFill,
+    search: SearchIcon,
+    gamepad: GamePad,
+    magic: ChemQuest,
+    gem: Gem,
+    tree: Tree,
   };
 
   let currentIcon = icon != null ? iconMap[icon] : MdiFile;
 
-  import { slide } from 'svelte/transition';
+  import { slide } from "svelte/transition";
 
   let animation = $state("none");
 
-  let isHovered = $state(false)
+  let isHovered = $state(false);
   const handleMouseOver = () => {
     if (animation == "none") {
       isHovered = true;
@@ -38,33 +39,29 @@
       isHovered = false;
     }
   };
-  
 </script>
 
 <!-- svelte-ignore a11y_mouse_events_have_key_events -->
-<div class="flex items-center gap-1 py-1 text-primary-900" 
+<div
+  class="flex items-center gap-1 py-1 text-primary-900"
   role="button"
   tabindex="0"
   aria-label="file"
   onmouseover={handleMouseOver}
   onmouseleave={handleMouseLeave}
   onfocusin={handleMouseOver}
-  onfocusout={handleMouseLeave}>
+  onfocusout={handleMouseLeave}
+>
   <span class="flex w-fit z-10 text-warning-300 leading-none">
-    {@html currentIcon }
-    </span>
-  
-    <div class="flex flex-row align-items">
-      <Underline>
+    {@html currentIcon}
+  </span>
+
+  <div class="flex flex-row align-items">
+    <Underline>
       {#if name == "this site"}
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={link} target="_blank" rel="noopener noreferrer">
           {name}
         </a>
-        
       {:else if link != ""}
         <a href={link}>
           {name}
@@ -72,17 +69,14 @@
       {:else}
         {name}
       {/if}
-      </Underline>
-      {#if isHovered}
-      <span 
-      transition:slide={{ delay: 200, duration: 300, axis:"x"}}>
+    </Underline>
+    {#if isHovered}
+      <span transition:slide={{ delay: 200, duration: 300, axis: "x" }}>
         <FileTags {tech} {topics} />
       </span>
-      {/if}
-    </div>
-      
-   
+    {/if}
   </div>
+</div>
 
 <style lang="postcss">
   span {

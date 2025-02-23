@@ -8,7 +8,7 @@ const OUTPUT_PATH = 'static/projects.json'
 
 function traverse(p: string) {
     const files = fs.readdirSync(p);
-    console.log("traversing", p, files);
+    // console.log("traversing", p, files);
     const result: any[] = [];
 
     for (const file of files) {
@@ -16,13 +16,14 @@ function traverse(p: string) {
         if (file === '+page.svx') {
             const { data } = matter(fs.readFileSync(filePath, 'utf-8'));
             //console.log(data)
-            return  ({
+            return ({
                 type: 'file',
                 name: data.title, // Use the directory name as the file name
                 link: path.basename(p),
                 icon: data.icon,
                 tech: data.tech,
-                topics: data.topics
+                topics: data.topics, 
+                parent: data.parent
             });
         }
         else if (file.startsWith("(")) {
@@ -44,6 +45,6 @@ const rootStructure = traverse(PROJECTS_DIR)
 
 fs.writeFileSync(OUTPUT_PATH, JSON.stringify(rootStructure, null, 2));
 console.log('Projects JSON generated at', OUTPUT_PATH);
-console.log(JSON.stringify(rootStructure))
+console.log(JSON.stringify(rootStructure, null, 2))
 
 

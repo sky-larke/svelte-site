@@ -5,16 +5,19 @@
   import OpenFolder from "~icons/mdi/folder-open";
   import ClosedFolder from "~icons/mdi/folder";
 
-  export let expanded = false;
-  export let name;
-  export let files: any[] = [];
+
+  let {expanded = false, name="", files = [], lastVisited =localStorage.getItem("lastVisited") ?? ""} = $props();
+  expanded = lastVisited === name ? true : expanded;
+
   function toggle() {
     expanded = !expanded;
+    localStorage.setItem("lastVisited", "");
+    lastVisited = "";
   }
 </script>
 
 <div class="group z-10">
-  <button on:click={toggle} class="font-medium text-success-500">
+  <button onclick={toggle} class="font-medium text-success-500">
     {#if expanded}
       <OpenFolder />
     {:else}

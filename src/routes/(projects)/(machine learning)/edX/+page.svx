@@ -1,6 +1,7 @@
 ---
 title: Course Completion Prediction
 date: 2024-08-30
+parent: machinelearning
 categories: 
   - Project
 tech:
@@ -98,4 +99,5 @@ For last login time and year of birth, I did use the average to replace null dat
 through the entire dataset. 
 
 
-This is the model I ended up submitting. 
+This is the model I ended up submitting for 97.74% test accuracy. The image only shows the score for 66% of the data, it was split in two parts. 
+<img src="{path}/66.png">

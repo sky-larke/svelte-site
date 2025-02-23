@@ -6,12 +6,19 @@
     let topicsButton = "badge bg-primary-500/50 text-success-900";
 
     let tagLimit = 3;
-    
-    all = all.length > tagLimit ? all.slice(0, 3): all;
-    console.log(all)
 
-
+    all = all.length > tagLimit ? all.slice(0, 3) : all;
 </script>
+
+<div class="flex flex-row pl-2 space-x-1 leading-none tags">
+    {#each all as tag}
+        <span
+            class="badge {topics.includes(tag)
+                ? topicsButton
+                : techButton} text-primary-900">{tag}</span
+        >
+    {/each}
+</div>
 
 <style>
     .tags {
@@ -23,13 +30,3 @@
         }
     }
 </style>
-
-<div
-class="flex flex-row pl-2 space-x-1 leading-none tags"
->
-{#each all as tag}
-    <span class="badge {topics.includes(tag) ? topicsButton : techButton} text-primary-900">{tag}</span>
-{/each}
-</div>
-
-

@@ -17,7 +17,8 @@
           "UI/UX",
           "Wireframe",
           "Mobile App"
-        ]
+        ],
+        "parent": "design"
       }
     ],
     "expanded": false
@@ -41,13 +42,8 @@
           "User Tests",
           "Art",
           "Design"
-        ]
-      },
-      {
-        "type": "file",
-        "name": "crystallarium",
-        "link": "crystallarium",
-        "icon": "gem"
+        ],
+        "parent": "games"
       },
       {
         "type": "file",
@@ -63,7 +59,8 @@
           "Collaboration",
           "Art",
           "Design"
-        ]
+        ],
+        "parent": "games"
       }
     ],
     "expanded": false
@@ -86,7 +83,8 @@
           "Machine Learning",
           "Data Science",
           "Classifier"
-        ]
+        ],
+        "parent": "machinelearning"
       }
     ],
     "expanded": false

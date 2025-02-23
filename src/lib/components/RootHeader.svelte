@@ -9,7 +9,7 @@
   gridColumns="grid-cols-3"
   slotDefault="place-self-center"
   slotTrail="place-content-end"
-  background="bg-primary-600/10" 
+  background="bg-primary-600/10"
   class="absolute w-full
     border-b-2 border-primary-800/50
     py-1 flex-start justify-between"

@@ -1,12 +1,16 @@
 <script lang="ts">
-    export let tags;
+    export let tech;
+    export let topics;
+    let all = tech.concat(topics);
+    let techButton = "badge bg-secondary-500/70";
+    let topicsButton = "badge bg-success-500/60";
 </script>
 
 <div
 class="flex flex-row space-x-1 py-3"
 >
-{#each tags as tag}
-    <span class="badge variant-filled-secondary text-primary-900">{tag}</span>
+{#each all as tag}
+    <span class="badge {topics.includes(tag) ? topicsButton : techButton} text-primary-900">{tag}</span>
 {/each}
 </div>
 

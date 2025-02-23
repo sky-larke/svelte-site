@@ -6,7 +6,8 @@
     export let title: string = "";
     export let subtitle: string = "";
     export let date: Date = new Date();
-    export let tags: string[] = [];
+    export let tech: string[] = [];
+    export let topics: string[] = [];
     export let thumbnail;
     export let path:string ="";
 
@@ -35,7 +36,7 @@
         <Time timestamp={date} />
     {/if}
     </span >
-    <Tags {tags} />
+    <Tags {tech} {topics} />
     {#if thumbnail}
         <img src="{path}/{thumbnail}" alt="thumbnail for {title}">
     {/if}
@@ -48,7 +49,7 @@
         @apply pb-2 font-semibold;
     }
     h2 {
-        @apply pt-4;
+        @apply pt-4 ;
     }
     h3 {
         @apply pt-4;
@@ -59,6 +60,7 @@
     .subheading {
         @apply font-semibold text-primary-600;
     }
+
     img {
         @apply py-4;
     }

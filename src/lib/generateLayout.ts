@@ -20,7 +20,9 @@ function traverse(p: string) {
                 type: 'file',
                 name: data.title, // Use the directory name as the file name
                 link: path.basename(p),
-                icon: data.icon
+                icon: data.icon,
+                tech: data.tech,
+                topics: data.topics
             });
         }
         else if (file.startsWith("(")) {

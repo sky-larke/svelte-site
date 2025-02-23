@@ -6,8 +6,10 @@ categories:
   - Project
   - Groupwork
   - Completed
-tags:
+tech:
   - AdobeXD
+topics:
+  - Collaboration
   - Design
   - UI/UX
   - Wireframe

@@ -1,12 +1,101 @@
 ---
-title: Kaggle 
+title: Course Completion Prediction
 date: 2024-08-30
 categories: 
   - Project
-tags:
+tech:
+  - python
+  - numpy
+  - scikit-learn
+topics:
   - Machine Learning
-path: ""
-thumbnail: 
+  - Data Science
+  - Classifier
+path: /assets/machinelearning/kaggle
+thumbnail: AdaBoost.png
 layout: blog
 icon: 
 ---
+
+For this project, I used anonymized student data from an educational platform used by two well known universities in Boston to predict whether or not a student would finish a class. 
+
+This was for a course, so you may find me wording things strangely to prevent people from googling this and stick to describing my approach on a high level. All students' models were tested against each other on a heretofore unseen dataset and ranked,
+and my model won 1st out of 51 with a 97.74% test accuracy.
+
+I evaluated two different models before submitting the better one of the two to the contest.
+
+## Data Processing
+I began by looking at all features and the kind of data each was. The absolutely irrelevant features, such as ID, were removed. 
+Some data was qualitative, like students' gender and level of education. Some data was quantitative, such as registration time, number of posts, year of birth.
+Some fields had null data (represented as NaN). 
+
+Null values for some quantitative features such as # of posts were essentially stand-ins for the value zero, so I began by replacing those. 
+However, a 0 for a timestamp doesn't work. After I converted all times to Unix timestamps, I took the dataset's average time and replaced NaN data with it. 
+This way, there wouldn't be random instances of students supposedly registering in 1970.
+
+For categorical data, I used one-hot encoding, which treats each category as a binary value. For example, for gender, 
+I split it into two features, male and female. If the student was indicated as male, they would have a 1 for male, and 0 for female,
+and vice versa for female. If the student did not have any gender listed, they would have a 0 for both features, preventing null data from influencing the data. 
+
+After I finished processing the data, I split it 30:70 into training/validation data. 
+
+## Model 1: Random Forest
+It's clear that this problem is a classification task, as the goal is to predict whether or not a student finishes.
+
+For this reason, I started with random forest. 
+Random forest is an ensemble method for classification that utilizes many decision trees. They are less prone to overfitting to training data than a singular decision tree. 
+Many decision trees are made, and they are each given a random part of the dataset, and then the average of each tree is taken for the result. This can be rather inefficient hardware-wise, but this was not a consideration for this model.
+
+scikit-learn's [RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html), which is identical in functionality to the classifier I was using, takes several hyperparameters. 
+The ones that I modified were the number of decision trees, and the maximum depth of those trees. 
+
+I utilized scikit-learn's [GridSearch](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html) to find the best hyperparameter values by running random forest with multiple different values of each, 
+and checking training and validation accuracy for best fit and signs of overfit. 
+
+Lastly, I added k-fold validation to reduce overfit as much as possible.
+
+My best validation accuracy for this was 95.3%, with a training accuracy of 95.2%.
+
+<img src="{path}/RandomForest.png" alt="A confusion matrix, showing correlation between the random forest's predicted label, and the actual label. ">
+The confusion matrix of one of the random forest models I ran, converted to percentages of the overall data. 
+
+## Model 2: AdaBoost
+
+AdaBoost is another ensemble method that sequentially adds weak classifiers (usually shallow decision trees/'stumps') to create an overall strong classifier. 
+Each weak classifier adjusts itself and its weights based upon the performance of the previous classifier.
+At the end, all the classifiers are given a weight based upon their performance, and then they are all averaged. 
+
+Similarly to random forest, it reduces decision tree overfit by using many trees and averaging, but it also has an element of learning from its mistakes. 
+
+With some arbitrary hyperparameters and even without k-fold validation, I got a validation accuracy of 96%, which was already better than the best of my random forest, so I figured this one was a better candidate.
+I was receiving a training error of 100%, which indicated an extreme overfit, so I moved on to finding the best hyperparameters.
+
+I again utilized GridSearch to find the best hyperparameters. I modified the max depth of each tree, number of trees, and the learning rate. 
+Learning rate is the amount that the new classifier contributes to the old model. A high learning rate means that the newest classifier has more impact.
+
+This was the most time consuming section. Each GridSearch instance took an hour to run, and there were several disparate directions in which the hyperparemeters were selected, which had me adjust the range a couple times.
+
+I eventually selected a model with a high depth (10) and a relatively low number of trees (50), meaning that each decision tree was rather large and there weren't many. It produced many combinations, including shallower trees or larger quantities. 
+However, the model was rather opinionated about the learning rate, which it selected to be low, likely indicating the poor accuracy of most of the trees.
+
+<img src="{path}/AdaBoost.png" alt="A confusion matrix, showing correlation between the random forest's predicted label, and the actual label. ">
+The confusion matrix of one of the AdaBoost models I ran, converted to percentages of the overall data. 
+
+My best validation accuracy was 97.5%, with a training accuracy of 99.8%, which did make me a bit wary. 
+
+The features with the highest correlation to student course completion were: 
+* **1)** the # of sections completed (45%)
+* **2)** the # of days a student was active (13%)
+* **3)** the number of times a student clicked on class material (10%)
+* **4)** the time that a student last logged in (10%)
+* **5)** the time that a student first registered (7%)
+
+There were also some contributions by the time a student first logged in, the year of birth of the student, the # of videos a student played, the country of origin, and level of education. 
+
+I had a couple iterations of the model in which some of the high features seemed a bit suspicious (sometimes a singular country would allegedly have more impact than the year od birth/# of videos played, and it was never the same country). I retrained the model in those cases, since I assume that they were overfit.
+
+For last login time and year of birth, I did use the average to replace null data, which may have made it less accurate. A point of improvement could be to utilize KNN to fit each data point with the 'closest' neighbor's value based upon other features, but this would be even more time-consuming, as it would mean another pass 
+through the entire dataset. 
+
+
+This is the model I ended up submitting. 

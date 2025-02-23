@@ -2,15 +2,16 @@
 title: "ChemQuest"
 subtitle: an educational chemistry-inspired RPG
 date: 2021-06-09
-categories: 
-  - Project
-  - Completed
-tags:
+
+tech:
+  - RPG Maker MZ
+topics:
   - Game Dev
-  - Gamemaker Studio
+  - Collaboration
+  - Prototypes
+  - User Tests
   - Art
   - Design
-  - Engineering
 path: /assets/games/chemquest
 thumbnail: chemquest.gif
 layout: blog

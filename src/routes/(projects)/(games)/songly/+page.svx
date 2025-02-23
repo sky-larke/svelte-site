@@ -2,10 +2,12 @@
 title: "Songly"
 subtitle: PIE Game Jam
 date: 2022-01-30
-tags:
-  - Game Dev
+tech:
   - Unity
   - C#
+topics:
+  - Game Dev
+  - Collaboration
   - Art
   - Design
 path: "/assets/games/songly"

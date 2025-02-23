@@ -1,0 +1,35 @@
+<script lang="ts">
+    export let tech;
+    export let topics;
+    let all = tech.concat(topics);
+    let techButton = "badge bg-success-500/60 text-success-900";
+    let topicsButton = "badge bg-primary-500/50 text-success-900";
+
+    let tagLimit = 3;
+    
+    all = all.length > tagLimit ? all.slice(0, 3): all;
+    console.log(all)
+
+
+</script>
+
+<style>
+    .tags {
+        opacity: 100%;
+    }
+    @media (max-width: 768px) {
+        .tags {
+            opacity: 0;
+        }
+    }
+</style>
+
+<div
+class="flex flex-row pl-2 space-x-1 leading-none tags"
+>
+{#each all as tag}
+    <span class="badge {topics.includes(tag) ? topicsButton : techButton} text-primary-900">{tag}</span>
+{/each}
+</div>
+
+

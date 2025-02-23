@@ -82,5 +82,5 @@ time {
 }
 
 a {
-  @apply anchor text-primary-600 hover:text-error-500
+  @apply anchor text-primary-600 hover:text-warning-400
 }

@@ -7,7 +7,17 @@
         "type": "file",
         "name": "Forager",
         "link": "oatmilk",
-        "icon": "tree"
+        "icon": "tree",
+        "tech": [
+          "AdobeXD"
+        ],
+        "topics": [
+          "Collaboration",
+          "Design",
+          "UI/UX",
+          "Wireframe",
+          "Mobile App"
+        ]
       }
     ],
     "expanded": false
@@ -20,7 +30,18 @@
         "type": "file",
         "name": "ChemQuest",
         "link": "chemquest",
-        "icon": "magic"
+        "icon": "magic",
+        "tech": [
+          "RPG Maker MZ"
+        ],
+        "topics": [
+          "Game Dev",
+          "Collaboration",
+          "Prototypes",
+          "User Tests",
+          "Art",
+          "Design"
+        ]
       },
       {
         "type": "file",
@@ -32,7 +53,17 @@
         "type": "file",
         "name": "Songly",
         "link": "songly",
-        "icon": "gamepad"
+        "icon": "gamepad",
+        "tech": [
+          "Unity",
+          "C#"
+        ],
+        "topics": [
+          "Game Dev",
+          "Collaboration",
+          "Art",
+          "Design"
+        ]
       }
     ],
     "expanded": false
@@ -43,9 +74,19 @@
     "files": [
       {
         "type": "file",
-        "name": "Kaggle",
+        "name": "Course Completion Prediction",
         "link": "edX",
-        "icon": null
+        "icon": null,
+        "tech": [
+          "python",
+          "numpy",
+          "scikit-learn"
+        ],
+        "topics": [
+          "Machine Learning",
+          "Data Science",
+          "Classifier"
+        ]
       }
     ],
     "expanded": false

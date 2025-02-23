@@ -2,7 +2,6 @@
   import Folder from "$lib/components/utils/Folder.svelte";
   import File from "$lib/components/utils/File.svelte";
 
-
   import { onMount } from "svelte";
   let hierarchy: any = [];
   let loading = true;

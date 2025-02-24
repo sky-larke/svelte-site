@@ -28,22 +28,32 @@ Players: 1
 # Gameplay
 > As Songly traverses the board they collect musical objects and put them in their backpack. The backpack can fit five objects. The musical objects spawn randomly on the game board based on the level and goal. If Songly collects all of the objects in the correct order based on the goal and presses spacebar the music of the goal plays and then they win that level. 
 
-<img src = "{path}/brainstorm.png" alt="">
+<img src = "{path}/brainstorm.png" alt="A sketch of the concept. There is a backpack inventory on the bottom, a goal on the top, and Songly, a blob traverses the middle, looking for the objects that are part of the goal.">
 
 Here's a bit of an example from our document for the goal of the game. 
 
 I did some visual design stuff with matching animation to 2D movement control in Unity, and some unity animator stuff. 
 
 **Songly basic walk & collect note animation**
-<img src = "{path}/All_Walks.gif">
+<img src = "{path}/All_Walks.gif" alt="A gif of Songly walking a couple steps and then having their backpack open and close from front, back, left, and right.">
 
 The way that we formatted this was that the player collects notes, which turn into motifs, which become themes, which eventually leads to the player doing an entire song after they collect everything. 
 
 **Sketches for theme sprites**
-<img src = "{path}/Theme_Visual.png">
-<img src = "{path}/Theme_Brainstorm.png">
+<div class="flex flex-row">
+<img src = "{path}/Theme_Visual.png" alt="A sketch of 3 levels. Level 1 has four themes, each represented by a symbol. Theme 1 is notes ACA, Theme 2 is notes ACDCB, Theme 3 is AAACEE, and Theme 4 is ABABC. 
+  Level 2 has three goals that are phrases made up of notes and themes. Phrase 1 is Theme 1 (T1), T2, T1, T2. Phrase 2 is T3, A, T2, T3, G, T4. Phrase 3 is T3, T2, T3, D, E, T2. 
+  Level 3 is a full song made up of all kinds. It is P1, P1, P2, P2, P3, P3. The notes such as 'A' are crossed out for Level 2, as if the designer may be having second thoughts.">
+<img src = "{path}/Theme_Brainstorm.png" alt="A brainstorming sketch that repeats some of the above information. The initial themes all have simple geometric shapes such as circles and triangles,
+  and the drawings iterate upon ideas on how to combine these shapes into more complex icons for phrases.">
+</div>
 
 **Actual theme sprites**
-<img src = "{path}/icons.gif" class="w-[30%] h-auto">
+<div class="max-w-[80%] h-auto"><img src = "{path}/icons.gif" alt="The top row has four icons, a red star, a blue cloud, a sunset-colored wave, and a green gem. 
+  Below and between the first two, there is an animated red star surrounded by blue sparkles, and between and below the other two, a green gem that has yellow 'waves' arranged like a flower.">
+</div>
+Row 1: Theme 1, theme 2, theme 3, theme 4
+
+Row 2: Phrase 1 (made up of T1 and T2), Phase 2 (made up of T3 and T4)
 
 

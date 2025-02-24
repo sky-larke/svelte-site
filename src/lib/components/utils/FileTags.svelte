@@ -3,7 +3,7 @@
     export let topics;
     let all = tech.concat(topics);
     let techButton = "badge bg-success-500/60 text-success-900";
-    let topicsButton = "badge bg-primary-500/50 text-success-900";
+    let topicsButton = "badge bg-secondary-500/50";
 
     let tagLimit = 3;
 
@@ -30,3 +30,4 @@
         }
     }
 </style>
+<!-- TODO: figure out how to handle mobile for this.  -->

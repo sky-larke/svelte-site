@@ -4,7 +4,7 @@
 
   import OpenFolder from "~icons/mdi/folder-open";
   import ClosedFolder from "~icons/mdi/folder";
-
+  import Self from './Folder.svelte'
 
   let {expanded = false, name="", files = [], lastVisited =localStorage.getItem("lastVisited") ?? ""} = $props();
   expanded = lastVisited === name ? true : expanded;
@@ -39,7 +39,7 @@
       {#each files as file}
         <li>
           {#if file.type === "folder"}
-            <svelte:self {...file} />
+            <Self {...file} />
           {:else}
             <File {...file} />
           {/if}

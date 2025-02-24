@@ -1,5 +1,4 @@
 <script lang="ts">
-    import BlogHeader from "$lib/components/blogheader.svelte";
     import Time from "svelte-time";
     import Tags from "$lib/components/tags.svelte";
     import { createPersistentStore } from "$lib/components/utils/PersistentStore.ts";
@@ -14,13 +13,15 @@
     export let path: string = "";
     export let parent: string = "";
     export const lastVisited = createPersistentStore("lastVisited", parent);
+    const page = createPersistentStore("page", "");
 
-    onMount(() => lastVisited.set(parent));
+    onMount(() => {
+        lastVisited.set(parent);
+        page.set(title);
+    });
 
-    let breadcrumbs = [
-        { label: "Projects", link: "" },
-        { label: title, link: "" },
-    ];
+    let chemQuest = title==="ChemQuest" ? "font-family: 'Unica One', serif;" :"";
+   
 </script>
 
 <svelte:head>
@@ -30,18 +31,15 @@
   <!-- Add other head elements like meta tags, CSS, etc. -->
 </svelte:head>
 
-<div class="relative pb-[2em]">
-    <BlogHeader {breadcrumbs} />
-</div>
-
 <main
     class="flex flex-col flex-grow content
         max-h-[90vh] pb-20 gap-[1em]
         sm:mx-[6em] mx-10 overflow-y-auto overflow-x-hidden no-scrollbar"
 >
     <div class="flex flex-col items-center">
-        <h1 class="mt-16">{title}</h1>
-        <span class="subheading">
+        
+        <h1 class="mt-16" style={chemQuest}>{(title = (title==="ChemQuest") ? "ChemQuesT" : title)}</h1>
+        <span class="subheading" >
             {#if subtitle != ""}
                 {subtitle} · <Time timestamp={date} />
             {:else}

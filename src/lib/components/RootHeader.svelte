@@ -7,11 +7,11 @@
 
 <AppBar
   gridColumns="grid-cols-3"
+  slotLead="font-bold"
   slotDefault="place-self-center"
   slotTrail="place-content-end"
-  background="bg-primary-600/10"
-  class="absolute w-full
-    border-b-2 border-primary-800/50
+  background="bg-primary-600/0"
+  class="
     py-1 flex-start justify-between"
 >
   <svelte:fragment slot="lead">~</svelte:fragment>

@@ -1,3 +1,4 @@
+
 import { join } from 'path';
 import type { Config } from 'tailwindcss';
 
@@ -19,22 +20,23 @@ const config = {
 	],
 	theme: {
 		extend: {
-			colors: {
-				"icon-pink": "#ECB5C3"
-			}
+		  fontFamily: {
+			unica: ['"Unica One"', "serif"],
+		  },
 		},
-	},
+	  },
 	plugins: [
 		skeleton({
-      themes: { 
-		preset: [
-			"modern",
-		],
+			themes: {
+				preset: [
+					"modern",
+				],
 
-		custom: [
-				myCustomTheme, 
-			] }
-    })
+				custom: [
+					myCustomTheme,
+				]
+			}
+		})
 	]
 } satisfies Config;
 

@@ -4,9 +4,8 @@
 </script>
 
 <AppBar
-    background="bg-primary-600/10"
-    class="absolute w-full
-    border-b-2 border-primary-800/50
+    background="bg-primary-600/0"
+    class="
     py-1 flex-start justify-between z-50"
 >
     <svelte:fragment slot="lead">
@@ -16,7 +15,7 @@
                     ><img
                         src="/assets/icon_360.png"
                         alt="pixel portrait icon"
-                        class="rounded-sm mx-2"
+                        class="rounded-sm mx-2 shadow"
                     /></a
                 >
             </li>

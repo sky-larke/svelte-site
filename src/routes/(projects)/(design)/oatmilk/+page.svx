@@ -51,19 +51,19 @@ This is our final summary, as well as some images & gifs of the final wireframe.
 
 > Forager is a volunteer-matching app designed using a social-media inspired framework to streamline the process for high schoolers looking for volunteer opportunities. Similar to the process of volunteering opportunities being spread through word of mouth, Forager features a recommendation and review system to allow users to see which opportunities their friends are involved with. 
 
-<img src="{path}/color_blind_test.png" alt="Image of 3 screens from the app involving a tree and a landscape filtered to show how it would look to someone with red-green colorblindness.">
+<img src="{path}/color_blind_test.png" alt="3 screens from the app involving a tree and a landscape filtered to show how it would look to someone with red-green colorblindness.">
 When I was trying out different color palettes, I used a [color-blindness simulator](http://www.color-blindness.com/coblis-color-blindness-simulator/) to check for contrast. Here's an image that I filtered through it to simulate red/green colorblindness.
 
-<img src="{path}/FORAGER_DEMO.gif" alt="Gif of a black on white loading screen with a squirrel logo and the app's name, Forager with the text 'Your next volunteering adventure awaits'. It transitions to a login and signup page with mountains in the background.">
+<img src="{path}/FORAGER_DEMO.gif" alt="Animation of a black on white loading screen with a squirrel logo and the app's name, Forager with the text 'Your next volunteering adventure awaits'. It transitions to a login and signup page with mountains in the background.">
 Here's a gif of the loading screen.
 
-<img src="{path}/preview1.gif" alt="Gif of a feed with multiple cards that represent volunteer opportunities. Upon focusing on the settings icon, a sidebar with text size, contrast level, and various other options opens. When the settings are closed and an individual opportunity is opened, it shows recommendations, location, reviews etc for each entry.">
+<img src="{path}/preview1.gif" alt="Animation of a feed with multiple cards that represent volunteer opportunities. Upon focusing on the settings icon, a sidebar with text size, contrast level, and various other options opens. When the settings are closed and an individual opportunity is opened, it shows recommendations, location, reviews etc for each entry.">
 Ignore my mouse, this is a preview on my computer, so my cursor is visible. This clip shows our settings sidebar, the general format for a post (including recommendations, location, reviews, etc), and the signup process. If we'd had more time we probably would have spent it to make the signup section a bit better, perhaps simulating an external link to a site/more specific timeslots. 
 
 For our home screen, we had a bar that reads the # of days the user has spent volunteering (to help motivate students to keep track of how much they've done). We were also recommended by the Amazon UI/UX designer that we were able to meet with to add text to each important icon to increase our accessibility.
 
 
-<img src="{path}/preview2.gif" alt="Gif of a search feed with 3 suggested searches, 'tree planting', 'eco volunteering', and 'environment'. There is a filter button with options for volunteering causes, distance, and inclusivity. Upon selecting an option, it is added as an icon in the search.">
+<img src="{path}/preview2.gif" alt="Animation of a search feed with 3 suggested searches, 'tree planting', 'eco volunteering', and 'environment'. There is a filter button with options for volunteering causes, distance, and inclusivity. Upon selecting an option, it is added as an icon in the search.">
 This one shows our filter overlay for search, with a demonstration of which filters & ways to sort were available.
 
 ### Reflection

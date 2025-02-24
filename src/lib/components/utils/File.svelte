@@ -43,7 +43,7 @@
 
 <!-- svelte-ignore a11y_mouse_events_have_key_events -->
 <div
-  class="flex items-center gap-1 py-1 text-primary-900"
+  class="flex items-center gap-1 py-1 text-surface-900"
   role="button"
   tabindex="0"
   aria-label="file"

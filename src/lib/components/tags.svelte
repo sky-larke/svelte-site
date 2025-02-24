@@ -2,11 +2,11 @@
     export let tech;
     export let topics;
     let all = tech.concat(topics);
-    let techButton = "badge bg-secondary-500/70";
-    let topicsButton = "badge bg-success-500/60";
+    let techButton = "badge bg-success-400";
+    let topicsButton = "badge bg-secondary-400";
 </script>
 
-<div class="flex flex-row space-x-1 py-3">
+<div class="flex flex-row sm:justify-center space-x-1 py-3 overflow-x-auto w-full no-scrollbar ">
     {#each all as tag}
         <span
             class="badge {topics.includes(tag)

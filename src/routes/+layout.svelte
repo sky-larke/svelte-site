@@ -2,6 +2,7 @@
   import "../app.css";
   import "../styles/tailwind.css"; // Import Tailwind CSS globally
   import Screen from "$lib/components/Screen.svelte";
+  import Header from "$lib/components/header.svelte";
   import { fade } from "svelte/transition";
   import { page } from "$app/state";
 </script>
@@ -22,6 +23,7 @@
 
 {#key page.url}
   <Screen>
+    <Header />
     <div
       class="ease-in-out"
       in:fade={{ duration: 100 }}

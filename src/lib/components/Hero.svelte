@@ -18,7 +18,7 @@
     }
 
     let defaultButton =
-        "bg-primary-600/40 hover:bg-secondary-500 focus-visible:bg-secondary-500";
+        "bg-primary-500/60 hover:bg-secondary-500 focus-visible:bg-secondary-500";
     let customButton =
         "font-semibold hover:font-bold btn-sm flex-1 px-3 shadow shrink transition-all duration-200 ease-in-out transform hover:scale-110 focus-visible:scale-110";
     let toggleButton =
@@ -35,7 +35,7 @@
         sm:min-w-[20%] sm:max-w-[40%] z-10";
 
     let profileImage =
-        "border-1 border-secondary-500/50 flex-shrink-0 object-fit\
+        "flex-shrink-0 object-fit shadow \
         max-w-[20%] h-auto  mb-2\
         sm:max-w-[50%] sm-mb-4";
 

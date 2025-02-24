@@ -9,10 +9,12 @@ const config = {
 
   preprocess: [
     vitePreprocess(),  // General preprocessing (e.g., SCSS, TypeScript)
-    mdsvex({ 
-      extensions: ['.svx', '.md'],  
+    mdsvex({
+      extensions: ['.svx', '.md'],
       layout: {
-        blog: './src/lib/components/blog.svelte'}}
+        blog: './src/lib/components/blog.svelte'
+      }
+    }
     )           // Preprocess .svx files (Markdown with Svelte components)
   ],
 

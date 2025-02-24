@@ -100,4 +100,4 @@ through the entire dataset.
 
 
 This is the model I ended up submitting for 97.74% test accuracy. The image only shows the score for 66% of the data, it was split in two parts. 
-<img src="{path}/66.png">
+<img src="{path}/66.png" alt="Shows a competition scoreboard, with 1st place, name Erin Park, no change in leaderboard rank, and 0.97430 accuracy">

@@ -2,9 +2,9 @@
 </script>
 
 <div
-  class="absolute screen-container
-    bg-primary-500/10 dark:bg-surface-500/10
-    border-2 border-surface-600 dark:border-primary-100 shadow"
+  class="absolute screen-container 
+    bg-primary-100 dark:bg-surface-500/10
+    border-0 border-primary-900 dark:border-primary-100 shadow"
 >
   <slot></slot>
 </div>
@@ -18,7 +18,7 @@
     overflow: hidden; /* Hide anything that exceeds the box */
 
     box-sizing: border-box;
-    border-radius: 0rem; /* Rounded corners */
+    border-radius: 0.5rem; /* Rounded corners */
     z-index: 50; /* Make sure the box is on top */
   }
 </style>

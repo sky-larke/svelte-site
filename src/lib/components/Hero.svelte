@@ -3,18 +3,21 @@
     let title = "software engineer";
     let imgurl = "/assets/icon.webp";
 
-    import { fade } from "svelte/transition";
-    import {createPersistentStore} from '$lib/components/utils/PersistentStore.ts';
+    import { fade, fly } from "svelte/transition";
+    import { createPersistentStore } from "$lib/components/utils/PersistentStore.ts";
 
     export const homePage = createPersistentStore("homePage", "home");
+    export const lastVisited = createPersistentStore("lastVisited", "");
 
     function toggleProjects() {
         homePage.update((value) =>
             value === "projects" ? "home" : "projects",
         );
+        localStorage.setItem("lastVisited", "");
     }
     function toggleAbout() {
         homePage.update((value) => (value === "about" ? "home" : "about"));
+        localStorage.setItem("lastVisited", "");
     }
 
     let defaultButton =
@@ -42,8 +45,7 @@
     let contentContainer =
         "flex flex-col order-2 justify-start flex-grow overflow-y-auto overflow-x-hidden no-scrollbar\
         pl-3 pt-2 pb-10 w-[90%] max-h-[60vh] \
-        sm:pl-5 sm:pt-15 sm:mt-3 sm:max-w-[90%] sm:max-h-[80vh]\
-        transition-opacity duration-500 ease-in-out";
+        sm:pl-5 sm:pt-15 sm:mt-3 sm:max-w-[90%] sm:max-h-[80vh]";
 
     import FileSys from "$lib/components/FileSys.svelte";
 
@@ -101,18 +103,21 @@
     </div>
 
     <!-- Content section -->
-    {#if $homePage != "home"}
-        <div
-            class={contentContainer}
-            in:fade={{ delay: 300 }}
-            out:fade={{ delay: 0 }}
-        >
-            {#if $homePage == "projects"}
-                <FileSys />
-            {:else if $homePage == "about"}
-                <p class="font-semibold font-size-md">Hi, I'm Erin.</p>
-                <div class="break-words">{desc}</div>
-            {/if}
-        </div>
-    {/if}
+
+    <div class={contentContainer}>
+        {#key $homePage}
+            <div
+                class="relative transition-opacity ease-in-out"
+                in:fade={{ delay: 300 }}
+                out:fly={{ y: 1, duration: 200 }}
+            >
+                {#if $homePage == "projects"}
+                    <FileSys />
+                {:else if $homePage == "about"}
+                    <p class="font-semibold font-size-md">Hi, I'm Erin.</p>
+                    <div class="break-words">{desc}</div>
+                {/if}
+            </div>
+        {/key}
+    </div>
 </div>

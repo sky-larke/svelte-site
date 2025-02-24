@@ -20,15 +20,18 @@
         page.set(title);
     });
 
-    let chemQuest = title==="ChemQuest" ? "font-family: 'Unica One', serif;" :"";
-   
+    let chemQuest =
+        title === "ChemQuest" ? "font-family: 'Unica One', serif;" : "";
 </script>
 
 <svelte:head>
-  <title> {title} | Erin Park's Personal Site</title>
-  <meta name="description" content="A blog post about my {title} project. Involves topics such as: {tech}, {topics}">
-  
-  <!-- Add other head elements like meta tags, CSS, etc. -->
+    <title>{title} | Erin Park's Personal Site</title>
+    <meta
+        name="description"
+        content="A blog post about my {title} project. Involves topics such as: {tech}, {topics}"
+    />
+
+    <!-- Add other head elements like meta tags, CSS, etc. -->
 </svelte:head>
 
 <main
@@ -37,9 +40,10 @@
         sm:mx-[6em] mx-10 overflow-y-auto overflow-x-hidden no-scrollbar"
 >
     <div class="flex flex-col items-center">
-        
-        <h1 class="mt-16" style={chemQuest}>{(title = (title==="ChemQuest") ? "ChemQuesT" : title)}</h1>
-        <span class="subheading" >
+        <h1 class="mt-16" style={chemQuest}>
+            {(title = title === "ChemQuest" ? "ChemQuesT" : title)}
+        </h1>
+        <span class="subheading">
             {#if subtitle != ""}
                 {subtitle} · <Time timestamp={date} />
             {:else}

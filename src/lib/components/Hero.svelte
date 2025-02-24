@@ -43,9 +43,9 @@
         sm:max-w-[50%] sm-mb-4";
 
     let contentContainer =
-        "flex flex-col order-2 justify-start flex-grow overflow-y-auto overflow-x-hidden no-scrollbar\
-        pl-3 pt-2 pb-10 w-[90%] max-h-[60vh] \
-        sm:pl-5 sm:pt-15 sm:mt-3 sm:max-w-[90%] sm:max-h-[80vh]";
+        "flex flex-col order-2 justify-center flex-grow overflow-y-auto overflow-x-hidden no-scrollbar\
+        pl-3 pt-10 pb-10 w-[90%] max-h-[60vh] \
+        sm:pl-5 sm:pt-15 sm:mt-3 sm:max-w-[90%] sm:h-[80vh]";
 
     import FileSys from "$lib/components/FileSys.svelte";
 
@@ -107,9 +107,8 @@
     <div class={contentContainer}>
         {#key $homePage}
             <div
-                class="relative transition-opacity ease-in-out"
-                in:fade={{ delay: 300 }}
-                out:fly={{ y: 1, duration: 200 }}
+                class="relative transition-opacity ease-in-out min-h-[50%]"
+                in:fade={{ delay: 200 }}
             >
                 {#if $homePage == "projects"}
                     <FileSys />

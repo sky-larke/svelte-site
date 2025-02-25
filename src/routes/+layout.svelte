@@ -13,11 +13,13 @@
   <meta name="theme-color" content="#ffffff" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Erin Park's Personal Site</title>
-  <meta name="application name" content="Erin Park's Personal Site>">
-  <meta name="description" content="Hi, I'm Erin, a computer science student. I'm from Seattle, unless you're also from Seattle, in which case I am actually from half an hour away.">
-  <meta name="image" content="assets/icon.webp">
-  <meta name="base" content="www.erinpark.org">
+  <meta name="application name" content="Erin Park's Personal Site>" />
+  <meta
+    name="description"
+    content="Hi, I'm Erin, a computer science student. I'm from Seattle, unless you're also from Seattle, in which case I am actually from half an hour away."
+  />
+  <meta name="image" content="assets/icon.webp" />
+  <meta name="base" content="www.erinpark.org" />
   <!-- Add other head elements like meta tags, CSS, etc. -->
 </svelte:head>
 

@@ -3,7 +3,7 @@
     let title = "software engineer";
     let imgurl = "/assets/icon.webp";
 
-    import { fade, fly } from "svelte/transition";
+    import { fade } from "svelte/transition";
     import { createPersistentStore } from "$lib/components/utils/PersistentStore.ts";
 
     export const homePage = createPersistentStore("homePage", "home");

@@ -3,6 +3,9 @@
 
     /** @type {import('./$types').PageProps} */
 </script>
+<svelte:head>
+    <title>Erin Park's Personal Site</title>
+</svelte:head>
 
 <main
     class="content

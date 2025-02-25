@@ -41,7 +41,7 @@
 >
     <div class="flex flex-col items-center">
         <h1 class="mt-16" style={chemQuest}>
-            {(title = title === "ChemQuest" ? "ChemQuesT" : title)}
+            {title === "ChemQuest" ? "ChemQuesT" : title}
         </h1>
         <span class="subheading">
             {#if subtitle != ""}

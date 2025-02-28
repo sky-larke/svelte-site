@@ -2,10 +2,12 @@
     import GithubIcon from "~icons/mdi/github";
     import LinkedIn from "~icons/mdi/linkedin";
     import Mail from "~icons/mdi/email";
+    import BlueSky from "~icons/ri/bluesky-fill";
 
     let github = "https://github.com/sky-larke";
     let linkedin = "https://www.linkedin.com/in/erin--park/";
     let email = "mailto:erinpark2024@u.northwestern.edu";
+    let bluesky = "https://bsky.app/profile/sky-larke.bsky.social";
 </script>
 
 <div class="items-center flex space-x-3">
@@ -17,8 +19,8 @@
     >
         <GithubIcon
             class="transition-transform duration-300 ease-in-out transform 
-            hover:scale-110 hover:text-warning-400 hover:dark:text-primary-400
-            focus:scale-110 focus:text-warning-400 focus:dark:text-primary-400"
+            hover:scale-110 hover:text-warning-400
+            focus:scale-110 focus:text-warning-400"
         ></GithubIcon>
     </a>
 
@@ -33,6 +35,18 @@
         hover:scale-110 hover:text-tertiary-500 hover:dark:text-tertiary-600-400
         focus:scale-110 focus:text-tertiary-600-700 focus:dark:text-tertiary-600-400"
         ></LinkedIn>
+    </a>
+    <a
+        href={bluesky}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Bluesky"
+    >
+        <BlueSky
+            class="transition-transform duration-300 ease-in-out transform 
+            hover:scale-110 hover:text-success-500 hover:dark:text-primary-400
+            focus:scale-110 focus:text-success-500 focus:dark:text-primary-400"
+        ></BlueSky>
     </a>
 
     <a

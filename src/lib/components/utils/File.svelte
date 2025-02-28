@@ -11,6 +11,7 @@
   import ChemQuest from "~icons/mingcute/magic-hat-fill?raw";
   import Gem from "~icons/hugeicons/gem?raw";
   import Tree from "~icons/mdi/pine-tree?raw";
+  import Person from '~icons/material-symbols/person?raw';
 
   const iconMap: Record<string, any> = {
     svelte: SvelteFill,
@@ -19,9 +20,20 @@
     magic: ChemQuest,
     gem: Gem,
     tree: Tree,
+    me: Person,
   };
 
   let currentIcon = icon != null ? iconMap[icon] : MdiFile;
+
+  const colorMap: Record<string, any> ={
+    purple: "text-primary-500",
+    blue: "text-success-500", 
+    denim: "text-tertiary-500",
+    pink: "text-warning-300",
+    salmon: "text-error-400",
+  }
+
+  let currentColor = icon == "me" ? colorMap["blue"] : colorMap["pink"];
 
   import { slide } from "svelte/transition";
 
@@ -43,7 +55,7 @@
 
 <!-- svelte-ignore a11y_mouse_events_have_key_events -->
 <div
-  class="flex items-center gap-1 py-1 text-surface-900"
+  class="flex items-center gap-1 py-1 text-primary-900"
   role="button"
   tabindex="0"
   aria-label="file"
@@ -52,7 +64,7 @@
   onfocusin={handleMouseOver}
   onfocusout={handleMouseLeave}
 >
-  <span class="flex w-fit z-10 text-warning-300 leading-none">
+  <span class="flex w-fit z-10 {currentColor} leading-none">
     {@html currentIcon}
   </span>
 

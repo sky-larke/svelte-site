@@ -23,9 +23,6 @@
 
   import { _homePage } from "../../routes/+page";
 
-  function toggleAbout() {
-    _homePage.set("about");
-  }
 </script>
 
 <div class="pb-2">Ask me about...</div>

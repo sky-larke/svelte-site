@@ -1,7 +1,6 @@
 <script lang="ts">
     import Time from "svelte-time";
     import Tags from "$lib/components/tags.svelte";
-    import { createPersistentStore } from "$lib/components/utils/PersistentStore.ts";
     import { onMount } from "svelte";
 
     export let title: string = "";
@@ -12,12 +11,11 @@
     export let thumbnail: string = "";
     export let path: string = "";
     export let parent: string = "";
-    export const lastVisited = createPersistentStore("lastVisited", parent);
-    const page = createPersistentStore("page", "");
+    import { _page, _lastVisited } from "../../routes/+page";
 
     onMount(() => {
-        lastVisited.set(parent);
-        page.set(title);
+        _lastVisited.set(parent);
+        _page.set(title);
     });
 
     let chemQuest =

@@ -30,9 +30,9 @@
         sm:flex-row sm:flex-grow-0";
 
     let profileContainer =
-        "flex flex-col items-center transition-all duration-300 ease-in-out \
+        "flex flex-col items-center\
         p-3  w-full min-w-[30%] \
-        sm:min-w-[20%] sm:max-w-[40%] sm:pt-[10%] z-10";
+        sm:min-w-[20%] sm:max-w-[40%] sm:pt-[10%] z-20";
 
     let profileImage =
         "flex-shrink-0 object-fit shadow \
@@ -55,7 +55,7 @@
 
 <div class={heroContainer}>
     <div
-        class="{profileContainer} transform transition-all duration-700 ease-in-out
+        class="{profileContainer} transform transition-all duration-500 ease-in-out
     {$_homePage === 'home'
             ? 'sm:translate-x-[70%] sm:translate-y-0 translate-y-[60%]'
             : ''}"
@@ -104,7 +104,7 @@
     <div class={contentContainer}>
         {#key $_homePage}
             <div
-                class="relative transition-opacity ease-in-out"
+                class="relative transition-opacity ease-in-out duration-500"
                 in:fade={{ delay: 200 }}
             >
                 {#if $_homePage == "projects"}

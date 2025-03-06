@@ -1,0 +1,2 @@
+eslint --fix $(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g' | grep -E '\.(tsx|jsx|ts|js|svelte)$')
+git update-index --again

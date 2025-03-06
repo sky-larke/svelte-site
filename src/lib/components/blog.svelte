@@ -60,20 +60,8 @@
     h1 {
         @apply pb-2 font-semibold;
     }
-    h2 {
-        @apply pt-4;
-    }
-    h3 {
-        @apply pt-4;
-    }
-    a {
-        @apply anchor;
-    }
     .subheading {
         @apply font-semibold text-primary-600;
     }
 
-    img {
-        @apply py-4;
-    }
 </style>

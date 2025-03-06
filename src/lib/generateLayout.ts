@@ -9,7 +9,7 @@ const OUTPUT_PATH = 'static/projects.json'
 function traverse(p: string) {
     const files = fs.readdirSync(p);
     // console.log("traversing", p, files);
-    const result: any[] = [];
+    const result: object[] = [];
 
     for (const file of files) {
         const filePath = path.join(p, file);

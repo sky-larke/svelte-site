@@ -10,11 +10,11 @@
         _homePage.update((value) =>
             value === "projects" ? "home" : "projects",
         );
-        localStorage.setItem("lastVisited", "");
+        _lastVisited.update(() => "");
     }
     function toggleAbout() {
         _homePage.update((value) => (value === "about" ? "home" : "about"));
-        localStorage.setItem("lastVisited", "");
+        _lastVisited.update(() => "");
     }
 
     let defaultButton =
@@ -26,23 +26,23 @@
 
     let heroContainer =
         "flex rounded-lg flex-col items-center transition-all duration-500 ease-in-out \
-        mx-4em pt-10 sm:pt-2 max-w-full \
-        sm:flex-row sm:flex-grow-0";
+        mx-4em pt-10 max-w-full \
+        sm:pt-2 sm:flex-row sm:flex-grow-0";
 
     let profileContainer =
-        "flex flex-col items-center\
-        p-3  w-full min-w-[30%] \
-        sm:min-w-[20%] sm:max-w-[40%] sm:pt-[10%] z-20";
+        "relative flex flex-col items-center\
+        p-3 w-full min-w-[40vh] \
+        sm:max-w-[80vh] sm:pt-[15vh] sm:pb-10vh";
 
     let profileImage =
         "flex-shrink-0 object-fit shadow \
-        max-w-[20%] h-auto  mb-2\
+        max-w-[20%] h-auto mb-2\
         sm:max-w-[50%] sm-mb-4";
 
     let contentContainer =
-        "flex flex-col order-2 justify-center flex-grow overflow-y-auto overflow-x-hidden no-scrollbar\
-        pl-3 w-[90%] pt-[55%] pb-[10%] max-h-[60vh] \
-        sm:pl-5 sm:pt-20 sm:pb-0 sm:max-w-[90%] sm:max-h-[80vh]";
+        "flex flex-col order-2 justify-start flex-grow overflow-y-auto overflow-x-hidden no-scrollbar\
+        pl-3 w-[90%] pb-[30%] max-h-[60vh] \
+        sm:pl-5 sm:pt-[10 h] sm:pb-[10vh] sm:max-w-[90%] sm:max-h-[90vh]";
 
     import FileSys from "$lib/components/FileSys.svelte";
 
@@ -57,7 +57,7 @@
     <div
         class="{profileContainer} transform transition-all duration-500 ease-in-out
     {$_homePage === 'home'
-            ? 'sm:translate-x-[70%] sm:translate-y-0 translate-y-[60%]'
+            ? 'sm:translate-x-[50%] sm:translate-y-0 translate-y-[60%]'
             : ''}"
     >
         <img

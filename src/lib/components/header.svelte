@@ -19,7 +19,7 @@
 
 
 <div class="absolute w-full h-min-[2em]
-    bg-primary-200 shadow">
+    bg-primary-200 shadow z-20">
 {#if page.url.pathname === "/"}
     <RootHeader />
 {:else}

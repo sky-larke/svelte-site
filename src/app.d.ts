@@ -3,9 +3,9 @@
 
 // Add this to prevent TypeScript errors with Tailwind's classes
 declare module "*.css" {
-	const content: any;
+	const content;
 	export default content;
-  }
+}
 
 declare global {
 	namespace App {
@@ -16,4 +16,4 @@ declare global {
 		// interface Platform {}
 	}
 }
-export {};
+export { };

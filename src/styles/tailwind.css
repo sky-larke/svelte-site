@@ -82,3 +82,6 @@ table {
   @apply table bg-primary-300 rounded-sm 
 }
 
+code {
+  @apply bg-primary-500/30 rounded-sm px-1
+}

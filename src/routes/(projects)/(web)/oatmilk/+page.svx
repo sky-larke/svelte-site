@@ -2,7 +2,7 @@
 title: "Forager"
 subtitle: "Adobe Design Jam"
 date: 2021-11-03
-parent: design
+parent: web
 categories: 
   - Projects
   - Groupwork
@@ -10,6 +10,7 @@ categories:
 tech:
   - AdobeXD
 topics:
+  - Front-end
   - Collaboration
   - Design
   - UI/UX

@@ -37,13 +37,13 @@
       class="border-l-2 border-l-primary-400"
     >
       {#each files as file}
-        <li>
+        
           {#if file.type === "folder"}
-            <Self {...file} />
-          {:else}
-            <File {...file} />
+          <li> <Self {...file} /></li>
+          {:else if file.name}
+          <li><File {...file} /></li>
           {/if}
-        </li>
+        
       {/each}
     </ul>
   {/if}

@@ -16,7 +16,7 @@ function traverse(p: string) {
         if (file === '+page.svx') {
             const { data } = matter(fs.readFileSync(filePath, 'utf-8'));
             //console.log(data)
-            return ({
+            return (data.draft ? {} : {
                 type: 'file',
                 name: data.title, // Use the directory name as the file name
                 link: path.basename(p),

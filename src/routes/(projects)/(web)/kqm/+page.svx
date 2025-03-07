@@ -1,0 +1,22 @@
+---
+title: "Site Redesign"
+subtitle: a redesign for a known game theorycrafting guide site
+date: 2021-06-12
+parent: web
+tech:
+  - NextJS
+  - Typescript
+  - PayloadCMS
+  - Tiptap
+  - Supabase
+topics:
+  - WIP
+  - Full stack
+  - Front end
+  - Back end
+path: 
+thumbnail: 
+layout: blog
+icon: 
+draft: true
+---

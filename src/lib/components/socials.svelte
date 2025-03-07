@@ -4,15 +4,15 @@
     import Mail from "~icons/mdi/email";
     import BlueSky from "~icons/ri/bluesky-fill";
 
-    let github = "https://github.com/sky-larke";
-    let linkedin = "https://www.linkedin.com/in/erin--park/";
-    let email = "mailto:erinpark2024@u.northwestern.edu";
-    let bluesky = "https://bsky.app/profile/sky-larke.bsky.social";
+    let github = "sky-larke";
+    let linkedin = "erin--park";
+    let email = "erinpark2024@u.northwestern.edu";
+    let bluesky = "sky-larke.bsky.social";
 </script>
 
 <div class="items-center flex space-x-3">
     <a
-        href={github}
+        href="https://github.com/{github}"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub"
@@ -25,7 +25,7 @@
     </a>
 
     <a
-        href={linkedin}
+        href="https://www.linkedin.com/in/{linkedin}"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
@@ -37,7 +37,7 @@
         ></LinkedIn>
     </a>
     <a
-        href={bluesky}
+        href="https://bsky.app/profile/{bluesky}"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Bluesky"
@@ -50,7 +50,7 @@
     </a>
 
     <a
-        href={email}
+        href="mailto:{email}"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Email"
@@ -64,10 +64,6 @@
 </div>
 
 <style lang="postcss">
-    img {
-        @apply h-6 w-6; /* Set the height and width for images */
-    }
-
     a {
         @apply text-surface-900;
     }

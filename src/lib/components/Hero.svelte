@@ -30,7 +30,7 @@
         sm:pt-2 sm:flex-row sm:flex-grow-0";
 
     let profileContainer =
-        "relative flex flex-col items-center\
+        "flex flex-col items-center\
         p-3 w-full min-w-[40vh] \
         sm:max-w-[80vh] sm:pt-[15vh] sm:pb-10vh";
 
@@ -42,7 +42,7 @@
     let contentContainer =
         "flex flex-col order-2 justify-start flex-grow overflow-y-auto overflow-x-hidden no-scrollbar\
         pl-3 w-[90%] pb-[30%] max-h-[60vh] \
-        sm:pl-5 sm:pt-[10 h] sm:pb-[10vh] sm:max-w-[90%] sm:max-h-[90vh]";
+        sm:pl-5 sm:pt-[10vh] sm:pb-[10vh] sm:max-w-[90%] sm:max-h-[90vh]";
 
     import FileSys from "$lib/components/FileSys.svelte";
 

@@ -42,7 +42,7 @@
     let contentContainer =
         "flex flex-col items-start flex-grow overflow-y-auto overflow-x-hidden no-scrollbar\
         pl-3 w-[90%] pb-[30%] max-h-[60vh] \
-        sm:pl-5 sm:pt-[20vh] sm:pb-[10vh] sm:max-w-[90%] sm:max-h-[90vh]";
+        sm:pl-5 sm:pt-[10vh] sm:pb-[10vh] sm:max-w-[90%] sm:max-h-[90vh]";
 
     import FileSys from "$lib/components/FileSys.svelte";
 

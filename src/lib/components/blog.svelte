@@ -53,7 +53,7 @@
             <img src="{path}/{thumbnail}" alt="thumbnail for {title}" />
         {/if}
     </div>
-    <slot></slot>
+    <slot />
 </main>
 
 <style lang="postcss">

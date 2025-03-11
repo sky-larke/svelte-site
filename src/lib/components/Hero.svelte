@@ -25,13 +25,13 @@
         "font-semibold bg-secondary-500 hover:bg-secondary-500 focus-visible:bg-secondary-500";
 
     let heroContainer =
-        "flex rounded-lg flex-col items-center transition-all duration-500 ease-in-out \
-        mx-4em pt-10 max-w-full \
+        "flex flex-col transition-all duration-500 ease-in-out \
+        mx-4em pt-10 max-w-full\
         sm:pt-2 sm:flex-row sm:flex-grow-0";
 
     let profileContainer =
         "flex flex-col items-center\
-        p-3 w-full min-w-[40vh] \
+        p-3 w-full min-w-[40vh] h-full\
         sm:max-w-[80vh] sm:pt-[15vh] sm:pb-10vh";
 
     let profileImage =
@@ -40,7 +40,7 @@
         sm:max-w-[50%] sm-mb-4";
 
     let contentContainer =
-        "flex flex-col order-2 justify-start flex-grow overflow-y-auto overflow-x-hidden no-scrollbar\
+        "flex flex-col items-start flex-grow overflow-y-auto overflow-x-hidden no-scrollbar\
         pl-3 w-[90%] pb-[30%] max-h-[60vh] \
         sm:pl-5 sm:pt-[10vh] sm:pb-[10vh] sm:max-w-[90%] sm:max-h-[90vh]";
 
@@ -104,7 +104,7 @@
     <div class={contentContainer}>
         {#key $_homePage}
             <div
-                class="relative transition-opacity ease-in-out duration-500"
+                class="transition-opacity ease-in-out duration-500"
                 in:fade={{ delay: 200 }}
             >
                 {#if $_homePage == "projects"}

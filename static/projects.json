@@ -23,6 +23,18 @@
       },
       {
         "type": "file",
+        "link": "crystallarium"
+      },
+      {
+        "type": "file",
+        "link": "idolshowdown"
+      },
+      {
+        "type": "file",
+        "link": "overturegames"
+      },
+      {
+        "type": "file",
         "name": "Songly",
         "link": "songly",
         "icon": "gamepad",
@@ -67,7 +79,7 @@
   },
   {
     "type": "folder",
-    "name": "websites",
+    "name": "web",
     "files": [
       {},
       {
@@ -86,7 +98,7 @@
           "Wireframe",
           "Mobile App"
         ],
-        "parent": "websites"
+        "parent": "web"
       }
     ],
     "expanded": false

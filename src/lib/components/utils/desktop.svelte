@@ -1,3 +1,3 @@
 <div class="hidden sm:flex">
-    <slot></slot>
+    <slot />
 </div>

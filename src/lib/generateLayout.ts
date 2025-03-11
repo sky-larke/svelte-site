@@ -31,7 +31,7 @@ function traverse(p: string) {
                 type: 'folder',
                 name: file.replace(/[()]/g, ""),
                 files: traverse(filePath),
-                expanded: true,
+                expanded: false,
             });
         } else if (fs.statSync(filePath).isDirectory()) {
             result.push(traverse(filePath));

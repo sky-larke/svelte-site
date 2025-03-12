@@ -1,18 +1,24 @@
 <script lang="ts">
   import File from "./File.svelte";
   import { slide } from "svelte/transition";
+  import { _allOpened, _lastVisited } from "../../../routes/+page";
+  import { get } from "svelte/store";
 
   import OpenFolder from "~icons/mdi/folder-open";
   import ClosedFolder from "~icons/mdi/folder";
-  import Self from './Folder.svelte'
+  import Self from "./Folder.svelte";
 
-  let {expanded = false, name="", files = [], lastVisited =localStorage.getItem("lastVisited") ?? ""} = $props();
-  expanded = lastVisited === name ? true : expanded;
+  let { expanded = false, name = "", files = [] } = $props();
+
+  expanded =
+    get(_lastVisited) === name || get(_allOpened).includes(name) ? true : false;
 
   function toggle() {
     expanded = !expanded;
-    localStorage.setItem("lastVisited", "");
-    lastVisited = "";
+    get(_allOpened).includes(name)
+      ? _allOpened.update((items) => items.filter((page) => page !== name))
+      : ($_allOpened = [...$_allOpened, name]);
+    _lastVisited.update(() => "");
   }
 </script>
 
@@ -34,41 +40,28 @@
   {#if expanded}
     <ul
       transition:slide={{ duration: 300 }}
-      class="border-l-2 border-l-primary-400"
     >
       {#each files as file}
-        
-          {#if file.type === "folder"}
-          <li> <Self {...file} /></li>
-          {:else if file.name}
+        {#if file.type === "folder"}
+          <li><Self {...file} /></li>
+        {:else if file.name}
           <li><File {...file} /></li>
-          {/if}
-        
+        {/if}
       {/each}
     </ul>
   {/if}
 </div>
 
-<style>
+<style lang="postcss">
   button {
-    /* background: url(/tutorial/icons/folder.svg) 0 0.1em no-repeat; */
-    background-size: 1em 1em;
-    border: none;
-    font-size: 14px;
-    display: flex;
-    gap: 3px;
-    align-items: center;
-    outline: none;
-    background: transparent no-repeat;
+    @apply items-center gap-3 bg-transparent bg-no-repeat bg-[length:1em_1em] border-none text-[14px] flex outline-none;
   }
 
   ul {
-    padding: 0.2em 0 0 0.5em;
-    margin: 0 0 0 0.5em;
-    list-style: none;
+    @apply pt-[0.2em] pl-[0.5em] ml-[0.5em] list-none border-l-2 border-l-primary-400
   }
 
   li {
-    padding: 0.2em 1px;
+    @apply pt-[0.2em] px-[1px]
   }
 </style>

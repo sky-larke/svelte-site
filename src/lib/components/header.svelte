@@ -14,7 +14,6 @@
         { label: "Projects", link: "" },
         { label: title, link: "" },
     ];
-    console.log("breadcrumbs", breadcrumbs);
 </script>
 
 

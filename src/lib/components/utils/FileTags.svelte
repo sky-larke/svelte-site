@@ -20,14 +20,5 @@
     {/each}
 </div>
 
-<style>
-    .tags {
-        opacity: 100%;
-    }
-    @media (max-width: 768px) {
-        .tags {
-            opacity: 0;
-        }
-    }
-</style>
-<!-- TODO: figure out how to handle mobile for this.  -->
+
+

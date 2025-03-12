@@ -19,6 +19,7 @@ function traverse(p: string) {
             return (data.draft ? {} : {
                 type: 'file',
                 name: data.title, // Use the directory name as the file name
+                subtitle: data.subtitle,
                 link: path.basename(p),
                 icon: data.icon,
                 tech: data.tech,

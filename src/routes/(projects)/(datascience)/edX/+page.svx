@@ -1,7 +1,8 @@
 ---
 title: Course Completion Prediction
+subtitle: a model for predicting student course completion
 date: 2024-08-30
-parent: machinelearning
+parent: datascience
 categories: 
   - Project
 tech:

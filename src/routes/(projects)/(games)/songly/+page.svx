@@ -1,6 +1,6 @@
 ---
 title: "Songly"
-subtitle: PIE Game Jam
+subtitle: a game for the 2022 PIE Game Jam
 date: 2022-01-30
 parent: games
 tech:

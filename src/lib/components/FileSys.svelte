@@ -1,7 +1,7 @@
 <script lang="ts">
   import Folder from "$lib/components/utils/Folder.svelte";
   import File from "$lib/components/utils/File.svelte";
-
+  import { _homePage } from "../../routes/+page";
   import { onMount } from "svelte";
   let hierarchy: any = [];
   let loading = true;
@@ -21,8 +21,7 @@
     }
   });
 
-  import { _homePage } from "../../routes/+page";
-
+  let siteTags = ["sveltekit", "typescript"];
 </script>
 
 <div class="pb-2">Ask me about...</div>
@@ -31,4 +30,7 @@
   name="this site"
   icon="svelte"
   link="https://github.com/sky-larke/svelte-site"
+  subtitle="a sveltekit powered portfolio site"
+  tech={siteTags}
 />
+<!-- TODO: add description popup as well -->

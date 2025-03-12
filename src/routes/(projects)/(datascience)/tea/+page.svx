@@ -1,0 +1,14 @@
+---
+title: Tea Purchase statistics
+date: 2025-03-30
+parent: datascience
+categories: 
+  - Project
+topics:
+  - Data Science
+path: /assets/machinelearning/tea
+thumbnail: 
+layout: blog
+icon: 
+draft: true
+---

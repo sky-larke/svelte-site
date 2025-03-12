@@ -1,11 +1,38 @@
 [
   {
     "type": "folder",
+    "name": "datascience",
+    "files": [
+      {
+        "type": "file",
+        "name": "Course Completion Prediction",
+        "subtitle": "an model for predicting ourse completion",
+        "link": "edX",
+        "icon": null,
+        "tech": [
+          "python",
+          "numpy",
+          "scikit-learn"
+        ],
+        "topics": [
+          "Machine Learning",
+          "Data Science",
+          "Classifier"
+        ],
+        "parent": "datascience"
+      },
+      {}
+    ],
+    "expanded": false
+  },
+  {
+    "type": "folder",
     "name": "games",
     "files": [
       {
         "type": "file",
         "name": "ChemQuest",
+        "subtitle": "an educational chemistry-inspired RPG",
         "link": "chemquest",
         "icon": "magic",
         "tech": [
@@ -36,6 +63,7 @@
       {
         "type": "file",
         "name": "Songly",
+        "subtitle": "a game for the 2022 PIE Game Jam",
         "link": "songly",
         "icon": "gamepad",
         "tech": [
@@ -55,36 +83,13 @@
   },
   {
     "type": "folder",
-    "name": "machine learning",
-    "files": [
-      {
-        "type": "file",
-        "name": "Course Completion Prediction",
-        "link": "edX",
-        "icon": null,
-        "tech": [
-          "python",
-          "numpy",
-          "scikit-learn"
-        ],
-        "topics": [
-          "Machine Learning",
-          "Data Science",
-          "Classifier"
-        ],
-        "parent": "machinelearning"
-      }
-    ],
-    "expanded": false
-  },
-  {
-    "type": "folder",
     "name": "web",
     "files": [
       {},
       {
         "type": "file",
         "name": "Forager",
+        "subtitle": "Adobe Design Jam",
         "link": "oatmilk",
         "icon": "tree",
         "tech": [

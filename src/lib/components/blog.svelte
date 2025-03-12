@@ -11,7 +11,7 @@
     export let thumbnail: string = "";
     export let path: string = "";
     export let parent: string = "";
-    import { _page, _lastVisited } from "../../routes/+page";
+    import { _page, _lastVisited} from "../../routes/+page";
 
     onMount(() => {
         _lastVisited.set(parent);

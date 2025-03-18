@@ -4,11 +4,136 @@ date: 2025-03-30
 parent: datascience
 categories: 
   - Project
+tech:
+  - Golang
+  - PostgreSQL
 topics:
   - Data Science
+  - Front-end
+  - Back-end
 path: /assets/machinelearning/tea
 thumbnail: 
 layout: blog
-icon: 
+icon: tea
 draft: true
 ---
+I had some discussions with people about at what point at which a tea gets diminishing returns and isn't worth the increased cost. 
+I like winning arguments and I hate being wrong, so I left the conversation to go find out the truth. 
+
+120 teas participated. I've taken the info from my personal notes over the past year and a half which include tea category, subtype, region, price, and more. 
+The majority of the teas I drink are oolongs, followed by puer. 
+Prices range from $0.11-$2.50/g, although ~75% are below $0.5/g. 
+This doesn't take into account how frequently I drink each tea either, if I drink 100g of Dayi 7542 and twenty 
+8g oolong samples, the 7542 will only show up once.
+
+I have some data on Notion about prices and vendors, so I took that to a google sheets table. 
+I used [monkeysort](https://leonid-shevtsov.github.io/monkeysort/)  to order them, which is a website that when given a list, shows you two options at a time. 
+You choose the winner between them. There are no ties, no rock-paper-scissors scenarios, 
+no elements of nuance, just straight up A or B. I went off of the question of 
+"If I had A or B, which one would I drink?". It was very vibes based and I might 
+have different answers tomorrow for the same teas. I reviewed the ranking after and moved
+some that I felt weren't accurate, but there's enough data that I feel that I didn't need 
+to split hairs and ranks could just be close enough.
+
+I measured cost efficiency using a metric that I will be referring to as "cost-rank score", 
+which I calculated by adding each item's cost Z-score (# of standard deviations from the average) 
+and its numerical rank's Z-score. I used Z-score so the average would be 0 and teas would be 
+evenly distributed for my overall score. Cost was measured in USD$/g, and I used the 
+non-discounted cost of the tea. If I couldn't find the exact listing, I found the closest 
+possible one, or I removed it from the data. Teas were ranked from 1-120, 1 being the best, 
+120 being the worst. After I added these values, I got each tea's Z-score for cost + rank, 
+which I used as my final value.
+
+I had some basic outlier checks. If the Z-score's absolute value was greater than 3, I dropped it. Still caused some outliers.
+
+Some hypotheses I have:
+- $1.2/g is when diminishing returns begin (when it becomes less cost-efficient)
+- ~$0.5/g is the most efficient price point for me
+- Oolongs are the most price-efficient for me to buy
+
+
+<h2 class="h2">Initial Results</h2>
+First, I began with google sheets. These charts are generated from there. Here is the link.
+<h3 class="h3">Overall</h3>
+<div class="flex flex-col sm:flex-row flex-wrap items-center gap-2">
+  <img src="{path}/rank-v-cost.svg" alt="graph of rank vs. cost" class="w-[1/2] h-auto">
+  <img src="{path}/rank-v-price-eff.svg" alt="graph of rank vs. price efficiency" class="w-[1/2] h-auto">
+  <img src="{path}/cost-v-price-eff.svg" alt="graph of cost vs. price efficiency" class="w-[1/2] h-auto">
+</div>
+
+
+<h3 class="h3">Oolong</h3>
+<div class="flex flex-col sm:flex-row flex-wrap items-center gap-2">
+<img src="{path}/oolong-rank-v-cost.svg" alt="graph of rank vs. cost" class="basis-1/3 h-auto">
+<img src="{path}/oolong-rank-v-price-eff.svg" alt="graph of rank vs. price efficiency" class="basis-1/3 h-auto">
+<img src="{path}/oolong-cost-v-price-eff.svg" alt="graph of cost vs. price efficiency" class="basis-1/3 h-auto">
+</div>
+
+<h3 class="h3">Puer</h3>
+<div class="flex flex-col sm:flex-row flex-wrap items-center gap-2">
+  <img src="{path}/puer-rank-v-cost.svg" alt="graph of rank vs. cost" class="basis-1/3 h-auto">
+<img src="{path}/puer-rank-v-price-eff.svg" alt="graph of rank vs. price efficiency" class="basis-1/3 h-auto">
+<img src="{path}/puer-cost-v-price-eff.svg" alt="graph of cost vs. price efficiency" class="basis-1/3 h-auto">
+</div>
+
+<h3 class="h3">White</h3>
+<div class="flex flex-col sm:flex-row flex-wrap items-center gap-2">
+  <img src="{path}/white-rank-v-cost.svg" alt="graph of rank vs. cost" class="basis-1/3 h-auto">
+<img src="{path}/white-rank-v-price-eff.svg" alt="graph of rank vs. price efficiency" class="basis-1/3 h-auto">
+<img src="{path}/white-cost-v-price-eff.svg" alt="graph of cost vs. price efficiency" class="basis-1/3 h-auto">
+</div>
+
+<h3 class="h3">Green</h3>
+<div class="flex flex-col sm:flex-row flex-wrap items-center gap-2">
+  <img src="{path}/green-rank-v-cost.svg" alt="graph of rank vs. cost" class="basis-1/3 h-auto">
+<img src="{path}/green-rank-v-price-eff.svg" alt="graph of rank vs. price efficiency" class="basis-1/3 h-auto">
+<img src="{path}/green-cost-v-price-eff.svg" alt="graph of cost vs. price efficiency" class="basis-1/3 h-auto">
+</div>
+
+<h3 class="h3">Black</h3>
+<div class="flex flex-col sm:flex-row flex-wrap items-center gap-2">
+  <img src="{path}/black-rank-v-cost.svg" alt="graph of rank vs. cost" class="basis-1/3 h-auto">
+<img src="{path}/black-rank-v-price-eff.svg" alt="graph of rank vs. price efficiency" class="basis-1/3 h-auto">
+<img src="{path}/black-cost-v-price-eff.svg" alt="graph of cost vs. price efficiency" class="basis-1/3 h-auto">
+</div>
+
+<h2 class="h2">Initial Conclusions</h2>
+Was pointed out most of these lines are overfit and have lots of outliers, and I agree. 
+
+
+<h2 class="h2">Web App</h2>
+Since I have the repetitive task tolerance of a 6-year-old after five Monster energy drinks, 
+I naturally got fed up with Google Sheets after getting this far. Clicking? On the screen? 
+Manually finding information with my eyeballs? No. 
+
+So, I figured that I'd have to connect a database to it, and I'd want some way of uploading my data.
+Notion, where the original data is from is based on PostgreSQL, so I thought that was a good starting point. 
+I did consider NoSQL, but the data is highly structured, so no point. Postgres should be good enough, and lets 
+me use JSONs. I selected CockroachDB to host the database. It has $400 of free credits a month and uses AWS 
+for serverless deployment. The CockroachDB [consistency model paper](https://www.cockroachlabs.com/blog/consistency-model/)
+helped me quite a bit in my Distributed Systems course so I thought I might as well use it, and I prefer to try
+different technologies if possible. 
+
+Okay, so I know I'm going to have my data in here, but how do I want to store it? What am I planning on doing with it?
+
+When it comes to what needs to go into the database, I need to have: 
+* Tea name
+* Cost per gram of tea (USD$/g)
+* Vendor
+* Type (e.g. black, green...)
+    * Subtype (e.g. young sheng, dancong, although there is some debate about some categories, 
+especially about what counts as 'aged', young, etc)
+* Terroir
+* Country
+* Rank
+
+Most of the info is easily obtained from my personal notes, and the current spreadsheet. But rank is harder. 
+I want to easily be able to rank a tea and shift all values accordingly. 
+
+PostgreSQL should let me do this. I will be using the "gap and island" method. 
+Each value will be given an initial float with gaps in between, and if something is inserted between two, it will take the middle point. 
+Then, when I'm done shuffling, I can use a periodic load-balancing function to reduce the issues of too many being inserted.
+
+Next, I need to think about how I want ranks to be added. I do like google sheets' functionality where I can drag to adjust ranks. That's harder to do.
+
+I could make it so as long as your google sheet is properly formatted, it will automatically update. 

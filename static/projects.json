@@ -6,7 +6,7 @@
       {
         "type": "file",
         "name": "Course Completion Prediction",
-        "subtitle": "an model for predicting ourse completion",
+        "subtitle": "a model for predicting student course completion",
         "link": "edX",
         "icon": null,
         "tech": [

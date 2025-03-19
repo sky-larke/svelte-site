@@ -10,7 +10,6 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"generate:projects": "node src/lib/generateLayout.ts",
-		"prepare": "husky",
 		"lint": "eslint --fix --ext .ts,.js,.svelte ."
 	},
 	"devDependencies": {

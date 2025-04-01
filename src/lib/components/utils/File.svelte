@@ -37,7 +37,8 @@
 
   import { slide } from "svelte/transition";
 
-  let animation = $state("none");
+  let animation = $state("none"); 
+  // TODO: Make this work so animation plays completely
 
   let isHovered = $state(false);
   const handleMouseOver = () => {

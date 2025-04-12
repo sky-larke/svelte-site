@@ -1,5 +1,5 @@
 ---
-title: Tea Purchase statistics
+title: Tea Purchase Statistics
 date: 2025-03-30
 parent: datascience
 categories: 
@@ -15,13 +15,15 @@ path: /assets/machinelearning/tea
 thumbnail: 
 layout: blog
 icon: tea
-draft: false
+draft: true
 ---
 This started, as all problems do, with me making facetious claims without proof on the Internet. 
 
-> User A: Where did you feel that there were diminishing returns for tea? I've heard it's at around 1$ per gram
+> **User A** 
+> Where did you feel that there were diminishing returns for tea? I've heard it's at around 1$ per gram
 > 
-> skylarke: think somewhere around $1.2-$1.5 it has started feeling iffier for me
+> **skylarke** 
+> think somewhere around $1.20-$1.50 it has started feeling iffier for me
 
 About 10 seconds after posting that, I realized that I couldn't actually back it up, and that really bothered me. 
 Someone could ask me 'Why?' and all I would be able to say was 'It feels like it', which is terrible for credibility. 

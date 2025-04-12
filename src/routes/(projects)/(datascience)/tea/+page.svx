@@ -20,6 +20,7 @@ draft: false
 This started, as all problems do, with me making facetious claims without proof on the Internet. 
 
 > User A: Where did you feel that there were diminishing returns for tea? I've heard it's at around 1$ per gram
+> 
 > skylarke: think somewhere around $1.2-$1.5 it has started feeling iffier for me
 
 About 10 seconds after posting that, I realized that I couldn't actually back it up, and that really bothered me. 
@@ -35,7 +36,7 @@ This doesn't take into account how frequently I drink each tea either, if I drin
 8g oolong samples, the 7542 will only show up once.
 
 I have some data on Notion about prices and vendors, so I took that to a google sheets table. 
-I used [monkeysort](https://leonid-shevtsov.github.io/monkeysort/)  to order them, which is a website that when given a list, shows you two options at a time. 
+I used [monkeysort](https://leonid-shevtsov.github.io/monkeysort/) to order them, which is a website that when given a list, shows you two options at a time. 
 You choose the winner between them. There are no ties, no rock-paper-scissors scenarios, 
 no elements of nuance, just straight up A or B. I went off of the question of 
 "If I had A or B, which one would I drink?". It was very vibes based and I might 
@@ -66,7 +67,8 @@ Some hypotheses I had:
 
 
 <h2 class="h2">Initial Results</h2>
-First, I began with a Google Sheets demo. These charts are generated from there. Here is the [link](https://docs.google.com/spreadsheets/d/1yZQ4RzxCBcF8WIU29-2kzYp-AzNq7K2YjRN2l3hfOj0/edit?gid=1409420018#gid=1409420018).
+First, I began with a Google Sheets demo. These charts are generated from there. Here is the 
+[link](https://docs.google.com/spreadsheets/d/1yZQ4RzxCBcF8WIU29-2kzYp-AzNq7K2YjRN2l3hfOj0/).
 <h3 class="h3">Overall</h3>
 <div class="flex flex-col sm:flex-row flex-wrap items-center gap-2">
   <img src="{path}/rank-v-cost.svg" alt="graph of rank vs. cost" class="w-[1/2] h-auto">

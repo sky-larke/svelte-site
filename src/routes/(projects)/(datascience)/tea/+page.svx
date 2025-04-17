@@ -15,7 +15,7 @@ path: /assets/machinelearning/tea
 thumbnail: 
 layout: blog
 icon: tea
-draft: true
+draft: false
 ---
 This started, as all problems do, with me making facetious claims without proof on the Internet. 
 
@@ -54,7 +54,7 @@ multiple criteria, why not just rank them based on the criteria? Why do the tier
 I measured cost efficiency using a metric that I will be referring to as "cost-rank score", 
 which I calculated by adding each item's cost Z-score (# of standard deviations from the average) 
 and its numerical rank's Z-score. I used Z-score so the average would be 0 and teas would be 
-evenly distributed for my overall score. Cost was measured in USD$/g, and I used the 
+evenly distributed for my overall score. Cost was measured in $USD/g, and I used the 
 non-discounted cost of the tea. If I couldn't find the exact listing, I found the closest 
 possible one, or I removed it from the data. Teas were ranked from 1-120, 1 being the best, 
 120 being the worst. After I added these values, I got each tea's Z-score for cost + rank, 
@@ -63,7 +63,7 @@ which I used as my final value.
 I had some basic outlier checks. If the Z-score's absolute value was greater than 3, I dropped it. Still caused some outliers.
 
 Some hypotheses I had:
-- $1.2/g-$1.5/G is when diminishing returns begin (when it becomes less cost-efficient)
+- $1.2/g-$1.5/g is when diminishing returns begin (when it becomes less cost-efficient)
 - ~$0.5/g is the most efficient price point for me
 - Oolongs are the most price-efficient for me to buy
 
@@ -131,11 +131,12 @@ the chance of liking a tea based upon previous experiences?
 <h2 class="h2">Web App Planning</h2>
 Since I have the repetitive task tolerance of a 6-year-old after five Monsters and a basket of Halloween candy, 
 I was absolutely fed up with Google Sheets after getting this far. Formatting data manually was bad enough, 
-making a classifier would be even more of a test of my patience.
+making a classifier on there would be even more of a test of my patience.
 
 Naturally, the only way forward would be a webapp that trains a regression model upon your own tea data
 and tells you what factors most affect your own personal enjoyment, complete with aesthetically appealing graphics
-and summaries. 
+and summaries. Some may say that you could simply 'employ critical thinking', but does critical thinking have 
+automation in it?
 
 <h2 class="h2">Database Decisions</h2>
 So, I have to have a database for my webapp, and I'd want some way of uploading my data.

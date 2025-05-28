@@ -21,7 +21,22 @@
         ],
         "parent": "datascience"
       },
-      {}
+      {
+        "type": "file",
+        "name": "Tea Purchase Statistics",
+        "link": "tea",
+        "icon": null,
+        "tech": [
+          "Golang",
+          "PostgreSQL"
+        ],
+        "topics": [
+          "Data Science",
+          "Front-end",
+          "Back-end"
+        ],
+        "parent": "datascience"
+      }
     ],
     "expanded": false
   },

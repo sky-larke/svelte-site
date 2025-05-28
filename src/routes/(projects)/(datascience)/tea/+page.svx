@@ -14,7 +14,7 @@ topics:
 path: /assets/machinelearning/tea
 thumbnail: 
 layout: blog
-icon: tea
+icon: 
 draft: false
 ---
 This started, as all problems do, with me making facetious claims without proof on the Internet. 
@@ -41,7 +41,7 @@ I have some data on Notion about prices and vendors, so I took that to a google 
 I used [monkeysort](https://leonid-shevtsov.github.io/monkeysort/) to order them, which is a website that when given a list, shows you two options at a time. 
 You choose the winner between them. There are no ties, no rock-paper-scissors scenarios, 
 no elements of nuance, just straight up A or B. I went off of the question of 
-"If I had A or B, which one would I drink?". It was very vibes based and I might 
+"If I had A or B, which one would I drink?". It was very vibes-based and I might 
 have different answers tomorrow for the same teas. I reviewed the ranking after and moved
 some that I felt weren't accurate, but there's enough data that I feel that I didn't need 
 to split hairs and ranks could just be close enough. This does mean that the metric is 
@@ -133,12 +133,15 @@ Since I have the repetitive task tolerance of a 6-year-old after five Monsters a
 I was absolutely fed up with Google Sheets after getting this far. Formatting data manually was bad enough, 
 making a classifier on there would be even more of a test of my patience.
 
-Naturally, the only way forward would be a webapp that trains a regression model upon your own tea data
+<!-- Naturally, the only way forward would be a webapp that trains a regression model upon your own tea data
 and tells you what factors most affect your own personal enjoyment, complete with aesthetically appealing graphics
 and summaries. Some may say that you could simply 'employ critical thinking', but does critical thinking have 
-automation in it?
+automation in it? -->
 
-<h2 class="h2">Database Decisions</h2>
+There will be more to this writeup - I just got caught up in actually making the app. 
+
+
+<!-- <h2 class="h2">Database Decisions</h2>
 So, I have to have a database for my webapp, and I'd want some way of uploading my data.
 
 There are two tables I would need
@@ -181,4 +184,4 @@ If the entry is not in the hashmap, add it with the current rank.
 
 After everything is done, anything left in the hashmap is a deleted/edited/duped entry and should be removed. 
 
-This goes through the database once and the csv once. Single pass? Fun.
+This goes through the database once and the csv once. Single pass? Fun. -->

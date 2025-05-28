@@ -3,4 +3,3 @@ declare module '~icons/*' {
   const component: typeof SvelteComponent;
   export default component;
 }
-  

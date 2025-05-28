@@ -9,14 +9,14 @@ export default defineConfig({
 		sveltekit(),
 		AutoImport({
 			resolvers: [
-			  IconsResolver({
-				prefix: 'Icon',
-				extension: 'jsx',
-			  }),
+				IconsResolver({
+					prefix: 'Icon',
+					extension: 'jsx',
+				}),
 			],
-		  }),
+		}),
 		Icons({
 			compiler: 'svelte',
 		})
-		],
+	],
 });

@@ -95,6 +95,7 @@
     {#if isHovered}
     <ul
     transition:slide={{ duration: 300 }}
+    class="border-none"
     >
       <span transition:slide={{ delay: 200, duration: 300, axis: "x" }} class="">
         <FileTags {tech} {topics} />

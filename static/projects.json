@@ -25,9 +25,10 @@
         "type": "file",
         "name": "Tea Purchase Statistics",
         "link": "tea",
-        "icon": null,
+        "icon": "tea",
         "tech": [
-          "Golang",
+          "Ruby",
+          "Heroku",
           "PostgreSQL"
         ],
         "topics": [

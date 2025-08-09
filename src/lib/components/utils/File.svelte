@@ -12,6 +12,7 @@
   import Gem from "~icons/hugeicons/gem?raw";
   import Tree from "~icons/mdi/pine-tree?raw";
   import Person from "~icons/material-symbols/person?raw";
+  import Tea from '~icons/mdi/tea?raw';
 
   const iconMap: Record<string, any> = {
     svelte: SvelteFill,
@@ -21,6 +22,7 @@
     gem: Gem,
     tree: Tree,
     me: Person,
+    tea: Tea
   };
 
   let currentIcon = icon != null ? iconMap[icon] : MdiFile;

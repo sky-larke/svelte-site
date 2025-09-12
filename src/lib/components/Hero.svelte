@@ -34,17 +34,17 @@
     let profileContainer =
         "flex flex-col items-center\
         p-3 w-full h-full\
-        sm:pt-[15vh] sm:pb-10vh";
+        sm:w-[60%] sm:pt-[15vh] sm:pb-10vh";
 
     let profileImage =
         "flex-shrink-0 object-fit shadow \
         max-w-[20vh] h-auto mb-2\
-        sm:max-w-[40vh] sm-mb-4";
+        sm:max-w-[40vh] sm:mb-4";
 
     let contentContainer =
         "flex flex-col items-start flex-grow overflow-y-auto overflow-x-hidden no-scrollbar\
         pl-3 w-[90%] pb-[30%] max-h-[60vh] \
-        sm:pt-[10vh] sm:pb-[10vh] sm:max-w-full sm:max-h-[90vh]";
+        sm:pr-[10vh] sm:pt-[15vh] sm:pb-[10vh] sm:max-w-full sm:max-h-[90vh]";
 
     import FileSys from "$lib/components/FileSys.svelte";
 </script>
@@ -53,7 +53,7 @@
     <div
         class="{profileContainer} transform transition-all duration-500 ease-in-out
     {$_homePage === 'home'
-            ? 'sm:translate-x-[50%] sm:translate-y-0 translate-y-[60%]'
+            ? 'sm:translate-x-[75%] sm:translate-y-0 translate-y-[60%]'
             : ''}"
     >
         <img
@@ -75,7 +75,7 @@
             <button
                 aria-label="About"
                 type="button"
-                class={(get(_homePage) == "about"
+                class={($_homePage == "about"
                     ? toggleButton
                     : defaultButton) + customButton}
                 onclick={toggleAbout}
@@ -85,7 +85,7 @@
             <button
                 aria-label="Projects"
                 type="button"
-                class={(get(_homePage) == "projects"
+                class={($_homePage === "projects"
                     ? toggleButton
                     : defaultButton) + customButton}
                 onclick={toggleProjects}

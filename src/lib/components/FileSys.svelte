@@ -24,8 +24,10 @@
   let siteTags = ["sveltekit", "typescript"];
 </script>
 
-<div class="pb-2">Ask me about...</div>
+<div class="pb-2 font-bold">Ask me about...</div>
 <Folder name="my projects" files={hierarchy} expanded />
+<!-- TODO: Add LinkedIn here
+ <Folder name="my work" files={[]}/> -->
 <File
   name="this site"
   icon="svelte"

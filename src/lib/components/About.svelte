@@ -29,13 +29,24 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Bluesky">Bluesky</a
-        >
+        >.
+    </p>
+
+    <p>
+        I have some experience in visual arts such as oil paints, color pencils, pixel art. 
+        Yes, I did draw my own portrait that's on this site.
+        I've done some animation, most notably for Aki in 
+        <a 
+            href="https://store.steampowered.com/app/1742020/Idol_Showdown/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Idol Showdown">Idol Showdown</a>.
+
     </p>
 
     <p>
         Unfortunately (for my vision), once I figured out how to read I never
-        stopped. I've historically enjoyed various forms of speculative fiction,
-        especially American dystopias and anything that has to do with space. I
+        stopped. I've historically enjoyed various forms of speculative fiction. I
         recently liked:
     </p>
     <ul>
@@ -55,14 +66,12 @@
     <p>
         Frequently, I drink loose-leaf tea. It's an excellent sensory
         experience, similar and sometimes even exceeding wine, and great for my
-        beverage budget. I most often drink oolongs, followed by puer and
-        sencha, although I do really enjoy fresh whites such as Silver Needle. I
-        have quite a bit of opinions about tea. Sometimes I'll even write notes,
+        beverage budget. Sometimes I'll even write notes,
         some of which are on my <a
             href="https://bsky.app/profile/sky-larke.bsky.social"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Bluesky">Bluesky.</a
+            aria-label="Bluesky">Bluesky</a
         >.
     </p>
 </div>

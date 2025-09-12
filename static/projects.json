@@ -39,7 +39,8 @@
         "parent": "datascience"
       }
     ],
-    "expanded": false
+    "expanded": false,
+    "color": "green"
   },
   {
     "type": "folder",
@@ -95,13 +96,29 @@
         "parent": "games"
       }
     ],
-    "expanded": false
+    "expanded": false,
+    "color": "salmon"
   },
   {
     "type": "folder",
     "name": "web",
     "files": [
       {},
+      {
+        "type": "file",
+        "name": "listening to leaves",
+        "subtitle": null,
+        "link": "https://www.listeningtoleaves.com/",
+        "icon": null,
+        "tech": [
+          "Squarespace"
+        ],
+        "topics": [
+          "Front-end",
+          "Website"
+        ],
+        "parent": "web"
+      },
       {
         "type": "file",
         "name": "Forager",
@@ -122,6 +139,7 @@
         "parent": "web"
       }
     ],
-    "expanded": false
+    "expanded": false,
+    "color": "blue"
   }
 ]

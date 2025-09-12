@@ -27,12 +27,42 @@ function traverse(p: string) {
                 parent: data.parent
             });
         }
+        else if (file === 'link.md') {
+            const { data } = matter(fs.readFileSync(filePath, 'utf-8'));
+            //console.log(data)
+            return (data.draft ? {} : {
+                type: 'file',
+                name: data.title, // Use the directory name as the file name
+                subtitle: data.subtitle,
+                link: data.link,
+                icon: data.icon,
+                tech: data.tech,
+                topics: data.topics, 
+                parent: data.parent
+            });
+        }
         else if (file.startsWith("(")) {
+            // Color select here
+            const name = file.replace(/[()]/g, "");
+            let color = "blue";
+
+            switch(name) {
+                case "datascience":
+                    color = "green";
+                    break;
+                case "games":
+                    color = "salmon";
+                    break;
+                default:
+                    break;
+            }
+
             result.push({
                 type: 'folder',
-                name: file.replace(/[()]/g, ""),
+                name: name,
                 files: traverse(filePath),
                 expanded: false,
+                color: color,
             });
         } else if (fs.statSync(filePath).isDirectory()) {
             result.push(traverse(filePath));

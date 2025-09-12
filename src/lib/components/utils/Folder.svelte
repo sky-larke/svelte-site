@@ -8,7 +8,15 @@
   import ClosedFolder from "~icons/mdi/folder";
   import Self from "./Folder.svelte";
 
-  let { expanded = false, name = "", files = [] } = $props();
+  const colorMap: Record<string, any> = {
+    purple: "primary-500",
+    blue: "success-500",
+    green: "tertiary-500",
+    pink: "warning-300",
+    salmon: "error-400",
+  };
+
+  let { expanded = false, name = "", files = [], color = "blue" } = $props();
 
   expanded =
     get(_lastVisited) === name || get(_allOpened).includes(name) ? true : false;
@@ -23,7 +31,7 @@
 </script>
 
 <div class="group z-10">
-  <button onclick={toggle} class="font-medium text-success-500">
+  <button onclick={toggle} class="font-medium text-{colorMap[color]}">
     {#if expanded}
       <OpenFolder />
     {:else}
@@ -31,7 +39,7 @@
     {/if}
     <div
       class="flex items-center gap-1 text-primary-900
-      hover:font-bold"
+      hover:font-bold hover:text-{colorMap[color]}"
     >
       {name}
     </div>

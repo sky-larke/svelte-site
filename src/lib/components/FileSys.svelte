@@ -25,7 +25,7 @@
 </script>
 
 <div class="pb-2 font-bold">Ask me about...</div>
-<Folder name="my projects" files={hierarchy} expanded />
+<Folder name="my projects" files={hierarchy} expanded/>
 <!-- TODO: Add LinkedIn here
  <Folder name="my work" files={[]}/> -->
 <File

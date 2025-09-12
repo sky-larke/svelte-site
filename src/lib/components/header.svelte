@@ -5,15 +5,17 @@
     import BlogHeader from '$lib/components/blogheader.svelte';
     
     let title:string ="";
+    let breadcrumbs:any;
 
     onMount(() => {
         title = localStorage.getItem('page') ?? title;
+        breadcrumbs = [
+            { label: "Projects", link: "" },
+            { label: title, link: "" },
+        ];
     });
 
-    let breadcrumbs = [
-        { label: "Projects", link: "" },
-        { label: title, link: "" },
-    ];
+
 </script>
 
 

@@ -1,7 +1,7 @@
 <script lang="ts">
     import Time from "svelte-time";
     import Tags from "$lib/components/tags.svelte";
-    import { onMount } from "svelte";
+    import { _page, _lastVisited} from "../../routes/+page";
 
     export let title: string = "";
     export let subtitle: string = "";
@@ -11,12 +11,9 @@
     export let thumbnail: string = "";
     export let path: string = "";
     export let parent: string = "";
-    import { _page, _lastVisited} from "../../routes/+page";
 
-    onMount(() => {
-        _lastVisited.set(parent);
-        _page.set(title);
-    });
+    $:_lastVisited.set(parent);
+    $:_page.set(title);
 
     let chemQuest =
         title === "ChemQuest" ? "font-family: 'Unica One', serif;" : "";

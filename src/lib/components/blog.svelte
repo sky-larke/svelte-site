@@ -15,8 +15,8 @@
     $:_lastVisited.set(parent);
     $:_page.set(title);
 
-    let chemQuest =
-        title === "ChemQuest" ? "font-family: 'Unica One', serif;" : "";
+    let chemQuest = 
+        title === "ChemQuest" ? "font-size: 50px; font-family: 'Unica One', serif;" : "";
 </script>
 
 <svelte:head>
@@ -58,7 +58,7 @@
         @apply pb-2 font-semibold;
     }
     .subheading {
-        @apply font-semibold text-primary-600;
+        @apply font-semibold text-primary-600 text-center;
     }
 
 </style>

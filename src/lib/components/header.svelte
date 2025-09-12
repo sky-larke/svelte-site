@@ -3,8 +3,9 @@
     import { onMount } from 'svelte';
     import RootHeader from '$lib/components/RootHeader.svelte';
     import BlogHeader from '$lib/components/blogheader.svelte';
+    import { _page, _lastVisited} from "../../routes/+page";
     
-    let title:string ="";
+    let title:string = "";
     let breadcrumbs:any;
 
     onMount(() => {

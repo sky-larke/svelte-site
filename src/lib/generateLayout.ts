@@ -47,7 +47,7 @@ function traverse(p: string) {
             let color = "blue";
 
             switch(name) {
-                case "datascience":
+                case "data science":
                     color = "green";
                     break;
                 case "games":

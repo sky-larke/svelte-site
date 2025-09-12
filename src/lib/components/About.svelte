@@ -28,7 +28,7 @@
             href="https://bsky.app/profile/sky-larke.bsky.social"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Bluesky">Bluesky.</a
+            aria-label="Bluesky">Bluesky</a
         >
     </p>
 

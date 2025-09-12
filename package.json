@@ -9,7 +9,7 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"generate:projects": "node src/lib/generateLayout.ts",
+		"generate:projects": "tsx src/lib/generateLayout.ts",
 		"lint": "eslint --fix --ext .ts,.js,.svelte ."
 	},
 	"devDependencies": {
@@ -32,6 +32,7 @@
 		"svelte-check": "^4.0.0",
 		"svelte-motion": "^0.12.2",
 		"tailwindcss": "^3.4.9",
+		"tsx": "^4.20.5",
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.26.0",
 		"unplugin-auto-import": "^19.1.0",

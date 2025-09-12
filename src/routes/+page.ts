@@ -1,7 +1,7 @@
 /** @type {import('./$types').PageLoad} */
 import {type Writable} from "svelte/store";
 import { writable } from 'svelte/store';
-import { createPersistentStore } from "$lib/components/utils/PersistentStore.js";
+import { createPersistentStore } from "$lib/components/utils/PersistentStore.ts";
 
 export async function load({ fetch }) {
     const res = await fetch('/projects.json');

@@ -26,8 +26,12 @@
 
 <div class="pb-2 font-bold">Ask me about...</div>
 <Folder name="my projects" files={hierarchy} expanded/>
-<!-- TODO: Add LinkedIn here
- <Folder name="my work" files={[]}/> -->
+<File
+  name="my work"
+  icon="li"
+  link="https://www.linkedin.com/in/erin--park/"
+  subtitle="my linkedin"
+/>
 <File
   name="this site"
   icon="svelte"

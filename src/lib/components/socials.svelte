@@ -32,8 +32,8 @@
     >
         <LinkedIn
             class="transition-transform duration-300 ease-in-out transform 
-        hover:scale-110 hover:text-tertiary-500 hover:dark:text-tertiary-600-400
-        focus:scale-110 focus:text-tertiary-600-700 focus:dark:text-tertiary-600-400"
+        hover:scale-110 hover:text-success-700 hover:dark:text-success-500
+        focus:scale-110 focus:text-success-700 focus:dark:text-success-500"
         ></LinkedIn>
     </a>
     <a

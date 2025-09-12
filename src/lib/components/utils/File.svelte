@@ -13,6 +13,7 @@
   import Tree from "~icons/mdi/pine-tree?raw";
   import Person from "~icons/material-symbols/person?raw";
   import Tea from '~icons/mdi/tea?raw';
+  import LinkedInIcon from '~icons/mdi/linkedin?raw';
 
   const iconMap: Record<string, any> = {
     svelte: SvelteFill,
@@ -22,7 +23,8 @@
     gem: Gem,
     tree: Tree,
     me: Person,
-    tea: Tea
+    tea: Tea,
+    li: LinkedInIcon,
   };
 
   let currentIcon = icon != null ? iconMap[icon] : MdiFile;
@@ -30,12 +32,12 @@
   const colorMap: Record<string, any> = {
     purple: "text-primary-500",
     blue: "text-success-500",
-    denim: "text-tertiary-500",
+    green: "text-tertiary-500",
     pink: "text-warning-300",
     salmon: "text-error-400",
   };
 
-  let currentColor = icon == "me" ? colorMap["blue"] : colorMap["pink"];
+  let currentColor = icon == "li" ? colorMap["blue"] : colorMap["pink"];
 
   import { slide } from "svelte/transition";
 
@@ -69,13 +71,14 @@
 >
   
 
-  <div class="flex flex-col align-items">
-    <div class="flex flex-row">
+  <div class="flex group items-center gap-2">
+    <div class="flex flex-col">
+    <span class="flex flex-row gap-2">
     <span class="flex w-fit z-10 {currentColor} leading-none">
       {@html currentIcon}
     </span>
     <Underline>
-      {#if name == "this site"}
+      {#if name == "this site" || name == "my work"}
         <a href={link} target="_blank" rel="noopener noreferrer">
           {name}
         </a>
@@ -87,23 +90,24 @@
         {name}
       {/if}
     </Underline>
+    </span>
     <!-- TODO: Fix this, wrap, mobile -->
     <!-- {#if isHovered && subtitle != ""}
     <div transition:slide={{ duration: 300 }} class="text-wrap">
       : {subtitle}
     </div>
     {/if} -->
+      {#if isHovered}
+      <ul
+      transition:slide={{ duration: 300 }}
+      class="border-none"
+      >
+        <span transition:slide={{ delay: 200, duration: 300, axis: "x" }} class="">
+          <FileTags {tech} {topics} />
+        </span>
+      </ul>
+      {/if}
     </div>
-    {#if isHovered}
-    <ul
-    transition:slide={{ duration: 300 }}
-    class="border-none"
-    >
-      <span transition:slide={{ delay: 200, duration: 300, axis: "x" }} class="">
-        <FileTags {tech} {topics} />
-      </span>
-    </ul>
-    {/if}
   </div>
 </div>
 
@@ -112,7 +116,7 @@
     @apply text-sm
   }
   span {
-    @apply flex items-center gap-2 
+    @apply flex items-center 
   }
 
   a {

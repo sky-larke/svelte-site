@@ -62,7 +62,7 @@
 
 <style lang="postcss">
   button {
-    @apply items-center gap-3 bg-transparent bg-no-repeat bg-[length:1em_1em] border-none text-[14px] flex outline-none;
+    @apply items-center gap-2 bg-transparent bg-no-repeat bg-[length:1em_1em] border-none text-[14px] flex outline-none;
   }
 
   ul {

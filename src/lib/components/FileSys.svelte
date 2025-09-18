@@ -21,7 +21,7 @@
     }
   });
 
-  let siteTags = ["sveltekit", "typescript"];
+  let siteTags = ["SvelteKit", "TypeScript"];
 </script>
 
 <div class="pb-2 font-bold">Ask me about...</div>

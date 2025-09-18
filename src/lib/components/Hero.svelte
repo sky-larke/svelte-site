@@ -8,6 +8,8 @@
     import { get } from "svelte/store";
     import About from "./About.svelte";
 
+    import Socials from "$lib/components/socials.svelte";
+
     function toggleProjects() {
         _homePage.update((value) =>
             value === "projects" ? "home" : "projects",
@@ -20,7 +22,7 @@
     }
 
     let defaultButton =
-        "bg-primary-500/60 hover:bg-secondary-500 focus-visible:bg-secondary-500";
+        "bg-primary-400 hover:bg-secondary-500 focus-visible:bg-secondary-500";
     let customButton =
         "font-semibold hover:font-bold btn-sm flex-1 px-3 shadow shrink transition-all duration-200 ease-in-out transform hover:scale-110 focus-visible:scale-110";
     let toggleButton =
@@ -53,7 +55,7 @@
     <div
         class="{profileContainer} transform transition-all duration-500 ease-in-out
     {$_homePage === 'home'
-            ? 'sm:translate-x-[75%] sm:translate-y-0 translate-y-[60%]'
+            ? 'sm:translate-x-[75%] sm:translate-y-0 translate-y-[40%]'
             : ''}"
     >
         <img
@@ -67,7 +69,7 @@
         >
             {name}
         </h1>
-        <h2 class="text-sm h4 font-semibold text-primary-700 whitespace-nowrap">
+        <h2 class="text-sm h4 text-primary-900 whitespace-nowrap">
             {title}
         </h2>
 
@@ -93,6 +95,7 @@
                 Projects
             </button>
         </div>
+        <Socials/>
     </div>
 
     <!-- Content section -->

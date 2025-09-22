@@ -71,7 +71,7 @@ th {
 }
 
 time {
-  @apply font-semibold text-primary-600
+  @apply font-normal text-primary-800
 }
 
 a {

@@ -1,5 +1,6 @@
 ---
-title: Tea Purchase Statistics
+title: Tea Purchase Stats
+subtitle: a site for tracking tea purchases
 date: 2025-03-30
 parent: datascience
 categories: 

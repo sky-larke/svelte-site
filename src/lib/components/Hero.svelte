@@ -5,10 +5,9 @@
 
     import { fade } from "svelte/transition";
     import { _homePage, _lastVisited, _allOpened } from "../../routes/+page";
-    import { get } from "svelte/store";
-    import About from "./About.svelte";
-
+    import About from "$lib/components/About.svelte";
     import Socials from "$lib/components/socials.svelte";
+    import FileSys from "$lib/components/FileSys.svelte";
 
     function toggleProjects() {
         _homePage.update((value) =>
@@ -31,31 +30,31 @@
     let heroContainer =
         "flex flex-col transition-all duration-500 ease-in-out \
         mx-4em pt-10 max-w-full\
-        sm:pt-2 sm:flex-row sm:flex-grow-0";
+        md:pt-2 md:flex-row md:flex-grow-0";
 
     let profileContainer =
         "flex flex-col items-center\
         p-3 w-full h-full\
-        sm:w-[60%] sm:pt-[15vh] sm:pb-10vh";
+        md:max-w-[50%] md:min-w-[25%] md:pt-[15vh] md:pb-10vh";
 
     let profileImage =
-        "flex-shrink-0 object-fit shadow \
+        "flex object-contain shadow \
         max-w-[20vh] h-auto mb-2\
-        sm:max-w-[40vh] sm:mb-4";
+        md:max-w-[40vh] md:min-w-[20vh] md:mb-4";
 
     let contentContainer =
         "flex flex-col items-start flex-grow overflow-y-auto overflow-x-hidden no-scrollbar\
         pl-8 w-[90%] pb-[30%] max-h-[60vh] \
-        sm:pl-3 sm:pr-[10vh] sm:pt-[15vh] sm:pb-[10vh] sm:max-w-full sm:max-h-[90vh]";
+        md:pl-3  md:pt-[15vh] md:pb-[10vh] md:max-w-full md:max-h-[90vh]";
 
-    import FileSys from "$lib/components/FileSys.svelte";
+
 </script>
 
 <div class={heroContainer}>
     <div
         class="{profileContainer} transform transition-all duration-500 ease-in-out
     {$_homePage === 'home'
-            ? 'sm:translate-x-[75%] sm:translate-y-0 translate-y-[40%]'
+            ? 'md:translate-x-[45%] md:translate-y-0 translate-y-[40%]'
             : ''}"
     >
         <img
@@ -65,7 +64,7 @@
             class={profileImage}
         />
         <h1
-            class="h1 font-bold whitespace-nowrap text-2xl sm:text-3xl lg:text-4xl"
+            class="h1 font-bold whitespace-nowrap text-2xl md:text-3xl lg:text-4xl"
         >
             {name}
         </h1>

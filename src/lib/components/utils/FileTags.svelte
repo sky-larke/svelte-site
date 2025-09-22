@@ -2,8 +2,8 @@
     export let tech;
     export let topics;
     let all = tech.concat(topics);
-    let techButton = "badge bg-success-500/60 text-success-900";
-    let topicsButton = "badge bg-secondary-500/50";
+    let techButton = "badge bg-primary-300";
+    let topicsButton = "badge bg-success-300";
 
     let tagLimit = 3;
 
@@ -15,7 +15,7 @@
         <span
             class="badge {topics.includes(tag)
                 ? topicsButton
-                : techButton} text-primary-900">{tag}</span
+                : techButton} text-primary-900 shadow">#{tag}</span
         >
     {/each}
 </div>

@@ -1,5 +1,5 @@
 ---
-title: Course Completion Prediction
+title: Course Completion
 subtitle: a model for predicting student course completion
 date: 2024-08-30
 parent: datascience

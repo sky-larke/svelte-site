@@ -1,7 +1,8 @@
 <script lang="ts">
-  let { name = "", icon, link = "#", tech = [], topics = [], subtitle=""} = $props();
+  let { name = "", icon, link = "#", tech = [], topics = [], subtitle="", date=""} = $props();
 
-  import Underline from "$lib/components/utils/underlineanim.svelte";
+  import Time from "svelte-time";
+
   import FileTags from "$lib/components/utils/FileTags.svelte";
 
   import MdiFile from "~icons/mdi/file?raw";
@@ -14,6 +15,7 @@
   import Person from "~icons/material-symbols/person?raw";
   import Tea from '~icons/mdi/tea?raw';
   import LinkedInIcon from '~icons/mdi/linkedin?raw';
+  
 
   const iconMap: Record<string, any> = {
     svelte: SvelteFill,
@@ -46,15 +48,16 @@
 
   let isHovered = $state(false);
   const handleMouseOver = () => {
-    if (animation == "none") {
-      isHovered = true;
-    }
+    if (animation == "none") isHovered = true;
   };
 
   const handleMouseLeave = () => {
-    if (animation == "none") {
-      isHovered = false;
-    }
+    if (animation == "none") isHovered = false;
+  };
+
+  let isOpened = $state(false);
+  const handleClick = () => {
+    if (isHovered) isOpened = !isOpened;
   };
 </script>
 
@@ -73,38 +76,42 @@
 
   <div class="flex group items-center gap-2">
     <div class="flex flex-col">
-    <span class="flex flex-row gap-2">
-    <span class="flex w-fit z-10 {currentColor} leading-none">
-      {@html currentIcon}
-    </span>
-    <Underline>
-      {#if name == "this site" || name == "my work"}
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          {name}
-        </a>
-      {:else if link != ""}
-        <a href={link}>
-          {name}
-        </a>
-      {:else}
-        {name}
+    <button class="flex flex-row gap-2 font-semibold" 
+            onclick={handleClick}>
+      <span class="flex w-fit z-10 {currentColor} leading-none">
+        {@html currentIcon}
+      </span>
+      {name} 
+      {#if date != ""}
+        <Time timestamp={date} format="| MMM. YYYY"/>
       {/if}
-    </Underline>
-    </span>
+  
+    </button>
     <!-- TODO: Fix this, wrap, mobile -->
     <!-- {#if isHovered && subtitle != ""}
     <div transition:slide={{ duration: 300 }} class="text-wrap">
       : {subtitle}
     </div>
     {/if} -->
-      {#if isHovered}
+      {#if isHovered || isOpened}
       <ul
       transition:slide={{ duration: 300 }}
-      class="border-none"
+      class=""
       >
         <span transition:slide={{ delay: 200, duration: 300, axis: "x" }} class="">
           <FileTags {tech} {topics} />
         </span>
+        <div class="flex flex-col pl-4">{subtitle}
+        {#if name == "this site" || name == "my work"}
+          <a href={link} target="_blank" rel="noopener noreferrer" class="hover:underline">
+            read more...
+          </a>
+        {:else if link != ""}
+          <a href={link} class="hover:underline">
+            read more...
+          </a>
+        {/if}
+        </div>
       </ul>
       {/if}
     </div>
@@ -120,7 +127,7 @@
   }
 
   a {
-    @apply text-sm no-underline text-primary-900 hover:text-primary-600;
+    @apply underline text-primary-900/70 hover:text-primary-600;
   }
   ul {
     @apply pt-[0.2em] pl-1 ml-2.5 list-none border-l-2 border-l-primary-400

@@ -70,6 +70,6 @@
   }
 
   li {
-    @apply pt-[0.2em] px-[1px]
+    @apply pt-[0.2em] pl-[1px]
   }
 </style>

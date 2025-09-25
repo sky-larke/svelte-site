@@ -1,7 +1,7 @@
 ---
-title: "Forager"
-subtitle: "this site"
-date: 2025-09-22
+title: "this site"
+subtitle: "a sveltekit powered portfolio site"
+date: 2025-09-25
 parent: web
 categories: 
   - Projects
@@ -15,7 +15,7 @@ thumbnail:
 path: 
 layout: blog
 icon: svelte
-draft: true
+draft: false
 ---
 
 

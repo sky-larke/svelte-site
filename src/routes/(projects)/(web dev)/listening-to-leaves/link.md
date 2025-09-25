@@ -1,6 +1,6 @@
 ---
 title: "listening to leaves"
-subtitle: 
+subtitle: "an ecommerce site for tea"
 date: 2025-09-03
 parent: web
 categories: 
@@ -13,7 +13,7 @@ topics:
 thumbnail: 
 path: 
 layout: 
-icon: 
+icon: ltl
 draft: false
 link: https://www.listeningtoleaves.com/
 ---

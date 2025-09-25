@@ -4,6 +4,28 @@
   import { _homePage } from "../../routes/+page";
   import { onMount } from "svelte";
   let hierarchy: any = [];
+  let education: any = [{
+        "type": "file",
+        "name": "Northwestern University",
+        "subtitle": "Bachelor of Science in Computer Science",
+        "date": "2026-03-02T00:00:00.00Z",
+        "link": "",
+        "icon": "northwestern",
+        "tech": [],
+        "topics": [],
+        "parent": ""
+      }, 
+      {
+          "type": "file",
+          "name": "Relevant Coursework",
+          "subtitle": "Operating Systems, Parallel Systems, Distributed Systems, Networking, Programming Languages, Artificial Intelligence, Machine Learning, Data Structures & Algorithms",
+          "date": "",
+          "link": "",
+          "icon": null,
+          "tech": [],
+          "topics": [],
+          "parent": ""
+        }];
   let loading = true;
   let error = null;
 
@@ -25,6 +47,7 @@
 </script>
 
 <div class="pb-2 font-bold">Ask me about...</div>
+<Folder name="education" files={education} expanded={true}></Folder>
 <Folder name="my projects" files={hierarchy} expanded/>
 <File
   name="my work"
@@ -32,11 +55,3 @@
   link="https://www.linkedin.com/in/erin--park/"
   subtitle="my linkedin"
 />
-<File
-  name="this site"
-  icon="svelte"
-  link="https://github.com/sky-larke/svelte-site"
-  subtitle="a sveltekit powered portfolio site"
-  tech={siteTags}
-/>
-<!-- TODO: add description popup as well -->

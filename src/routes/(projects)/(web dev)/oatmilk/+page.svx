@@ -1,6 +1,6 @@
 ---
 title: "Forager"
-subtitle: "Adobe Design Jam"
+subtitle: "an Adobe design jam wireframe"
 date: 2021-11-03
 parent: web
 categories: 

@@ -10,7 +10,7 @@
     all = all.length > tagLimit ? all.slice(0, 3) : all;
 </script>
 
-<div class="flex flex-row pl-4 space-x-1 leading-none tags">
+<div class="flex flex-row pl-4 space-x-1 leading-none tags overflow-x-auto w-full no-scrollbar ">
     {#each all as tag}
         <span
             class="badge {topics.includes(tag)

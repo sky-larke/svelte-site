@@ -112,9 +112,9 @@
       {
         "type": "file",
         "name": "listening to leaves",
-        "subtitle": null,
+        "subtitle": "an ecommerce site for tea",
         "link": "https://www.listeningtoleaves.com/",
-        "icon": null,
+        "icon": "ltl",
         "tech": [
           "Squarespace"
         ],
@@ -127,7 +127,7 @@
       {
         "type": "file",
         "name": "Forager",
-        "subtitle": "Adobe Design Jam",
+        "subtitle": "an Adobe design jam wireframe",
         "date": "2021-11-03T00:00:00.000Z",
         "link": "oatmilk",
         "icon": "tree",
@@ -146,9 +146,9 @@
       },
       {
         "type": "file",
-        "name": "Forager",
-        "subtitle": "this site",
-        "date": "2025-09-22T00:00:00.000Z",
+        "name": "this site",
+        "subtitle": "a sveltekit powered portfolio site",
+        "date": "2025-09-25T00:00:00.000Z",
         "link": "site",
         "icon": "svelte",
         "tech": [

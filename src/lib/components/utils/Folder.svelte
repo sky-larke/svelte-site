@@ -18,8 +18,8 @@
 
   let { expanded = false, name = "", files = [], color = "blue" } = $props();
 
-  expanded =
-    get(_lastVisited) === name || get(_allOpened).includes(name) ? true : false;
+  expanded = expanded ??
+    (get(_lastVisited) === name || get(_allOpened).includes(name) ? true : false);
 
   function toggle() {
     expanded = !expanded;

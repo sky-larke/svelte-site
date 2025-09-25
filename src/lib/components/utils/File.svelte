@@ -2,6 +2,7 @@
   let { name = "", icon, link = "#", tech = [], topics = [], subtitle="", date=""} = $props();
 
   import Time from "svelte-time";
+  import { slide } from "svelte/transition";
 
   import FileTags from "$lib/components/utils/FileTags.svelte";
 
@@ -15,6 +16,8 @@
   import Person from "~icons/material-symbols/person?raw";
   import Tea from '~icons/mdi/tea?raw';
   import LinkedInIcon from '~icons/mdi/linkedin?raw';
+  import Northwestern from '~icons/mdi/alpha-n-box?raw';
+  import RawWave from '~icons/qlementine-icons/wave-16?raw';
   
 
   const iconMap: Record<string, any> = {
@@ -27,24 +30,24 @@
     me: Person,
     tea: Tea,
     li: LinkedInIcon,
+    northwestern: Northwestern,
+    ltl: RawWave,
   };
 
   let currentIcon = icon != null ? iconMap[icon] : MdiFile;
 
   const colorMap: Record<string, any> = {
     purple: "text-primary-500",
+    darkpurple: "text-primary-700",
     blue: "text-success-500",
     green: "text-tertiary-500",
     pink: "text-warning-300",
     salmon: "text-error-400",
   };
 
-  let currentColor = icon == "li" ? colorMap["blue"] : colorMap["pink"];
-
-  import { slide } from "svelte/transition";
+  let currentColor = (icon == "northwestern") ? colorMap["darkpurple"] : (icon == "li") ? colorMap["blue"] : colorMap["pink"];
 
   let animation = $state("none"); 
-  // TODO: Make this work so animation plays completely
 
   let isHovered = $state(false);
   const handleMouseOver = () => {
@@ -56,6 +59,7 @@
   };
 
   let isOpened = $state(false);
+  isOpened = (icon == "northwestern") ? true : false; // Always default open education BS
   const handleClick = () => {
     if (isHovered) isOpened = !isOpened;
   };
@@ -76,6 +80,7 @@
 
   <div class="flex group items-center gap-2">
     <div class="flex flex-col">
+    <!-- The file itself -->
     <button class="flex flex-row gap-2 font-semibold" 
             onclick={handleClick}>
       <span class="flex w-fit z-10 {currentColor} leading-none">

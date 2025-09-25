@@ -19,7 +19,6 @@
   import Northwestern from '~icons/mdi/alpha-n-box?raw';
   import RawWave from '~icons/qlementine-icons/wave-16?raw';
   
-
   const iconMap: Record<string, any> = {
     svelte: SvelteFill,
     search: SearchIcon,

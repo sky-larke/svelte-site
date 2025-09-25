@@ -31,7 +31,7 @@
 </script>
 
 <div class="group z-10">
-  <button onclick={toggle} class="font-medium text-{colorMap[color]}">
+  <button onclick={toggle} class="font-semibold text-{colorMap[color]}">
     {#if expanded}
       <OpenFolder />
     {:else}

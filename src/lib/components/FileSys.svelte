@@ -53,5 +53,5 @@
   name="my work"
   icon="li"
   link="https://www.linkedin.com/in/erin--park/"
-  subtitle="my linkedin"
+  subtitle=""
 />

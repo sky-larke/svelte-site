@@ -48,9 +48,9 @@
 
 <div class="pb-2 font-bold">Ask me about...</div>
 <Folder name="education" files={education} expanded={true}></Folder>
-<Folder name="my projects" files={hierarchy} expanded/>
+<Folder name="projects" files={hierarchy} expanded/>
 <File
-  name="my work"
+  name="work"
   icon="li"
   link="https://www.linkedin.com/in/erin--park/"
   subtitle=""

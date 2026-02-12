@@ -8,7 +8,7 @@
         "type": "file",
         "name": "Northwestern University",
         "subtitle": "Bachelor of Science in Computer Science",
-        "date": "2026-03-02T00:00:00.00Z",
+        "date": "2026-06-02T00:00:00.00Z",
         "link": "",
         "icon": "northwestern",
         "tech": [],

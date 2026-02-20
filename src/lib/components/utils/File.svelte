@@ -105,14 +105,14 @@
         <span transition:slide={{ delay: 200, duration: 300, axis: "x" }} class="">
           <FileTags {tech} {topics} />
         </span>
-        <div class="flex flex-col pl-4">{subtitle}
+        <div class="flex flex-col pl-4">
         {#if name == "this site" || name == "my work"}
           <a href={link} target="_blank" rel="noopener noreferrer" class="hover:underline">
-            read more...
+            {subtitle}
           </a>
         {:else if link != ""}
           <a href={link} class="hover:underline">
-            read more...
+            {subtitle}
           </a>
         {/if}
         </div>
@@ -131,7 +131,7 @@
   }
 
   a {
-    @apply underline text-primary-900/70 hover:text-primary-600;
+    @apply text-primary-600 hover:text-primary-600;
   }
   ul {
     @apply pt-[0.2em] pl-1 ml-2.5 list-none border-l-2 border-l-primary-400

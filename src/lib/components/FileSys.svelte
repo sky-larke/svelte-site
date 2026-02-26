@@ -18,7 +18,7 @@
       {
           "type": "file",
           "name": "Relevant Coursework",
-          "subtitle": "Operating Systems, Parallel Systems, Distributed Systems, Networking, Programming Languages, Artificial Intelligence, Machine Learning, Data Structures & Algorithms",
+          "subtitle": "Compilers, Operating Systems, Parallel Systems, Distributed Systems, Networking, Programming Languages, Artificial Intelligence, Machine Learning, Data Structures & Algorithms",
           "date": "",
           "link": "",
           "icon": null,

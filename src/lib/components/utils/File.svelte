@@ -110,6 +110,8 @@
           <a href={link} target="_blank" rel="noopener noreferrer" class="hover:underline">
             {subtitle}
           </a>
+        {:else if name == "Northwestern University" || name == "Relevant Coursework"}
+        {subtitle}
         {:else if link != ""}
           <a href={link} class="hover:underline">
             {subtitle}

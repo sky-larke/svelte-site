@@ -1,5 +1,13 @@
 <script lang="ts">
-  let { name = "", icon, link = "#", tech = [], topics = [], subtitle="", date=""} = $props();
+  let {
+    name = "",
+    icon,
+    link = "#",
+    tech = [],
+    topics = [],
+    subtitle = "",
+    date = "",
+  } = $props();
 
   import Time from "svelte-time";
   import { slide } from "svelte/transition";
@@ -14,11 +22,11 @@
   import Gem from "~icons/hugeicons/gem?raw";
   import Tree from "~icons/mdi/pine-tree?raw";
   import Person from "~icons/material-symbols/person?raw";
-  import Tea from '~icons/mdi/tea?raw';
-  import LinkedInIcon from '~icons/mdi/linkedin?raw';
-  import Northwestern from '~icons/mdi/alpha-n-box?raw';
-  import RawWave from '~icons/qlementine-icons/wave-16?raw';
-  
+  import Tea from "~icons/mdi/tea?raw";
+  import LinkedInIcon from "~icons/mdi/linkedin?raw";
+  import Northwestern from "~icons/mdi/alpha-n-box?raw";
+  import RawWave from "~icons/qlementine-icons/wave-16?raw";
+
   const iconMap: Record<string, any> = {
     svelte: SvelteFill,
     search: SearchIcon,
@@ -44,9 +52,14 @@
     salmon: "text-error-400",
   };
 
-  let currentColor = (icon == "northwestern") ? colorMap["darkpurple"] : (icon == "li") ? colorMap["blue"] : colorMap["pink"];
+  let currentColor =
+    icon == "northwestern"
+      ? colorMap["darkpurple"]
+      : icon == "li"
+        ? colorMap["blue"]
+        : colorMap["pink"];
 
-  let animation = $state("none"); 
+  let animation = $state("none");
 
   let isHovered = $state(false);
   const handleMouseOver = () => {
@@ -58,7 +71,7 @@
   };
 
   let isOpened = $state(false);
-  isOpened = (icon == "northwestern") ? true : false; // Always default open education BS
+  isOpened = icon == "northwestern" ? true : false; // Always default open education BS
   const handleClick = () => {
     if (isHovered) isOpened = !isOpened;
   };
@@ -75,50 +88,55 @@
   onfocusin={handleMouseOver}
   onfocusout={handleMouseLeave}
 >
-  
-
   <div class="flex group items-center gap-2">
     <div class="flex flex-col">
-    <!-- The file itself -->
-    <button class="flex flex-row gap-2 font-semibold" 
-            onclick={handleClick}>
-      <span class="flex w-fit z-10 {currentColor} leading-none">
-        {@html currentIcon}
-      </span>
-      {name} 
-      {#if date != ""}
-        <Time timestamp={date} format="| MMM. YYYY"/>
-      {/if}
-  
-    </button>
-    <!-- TODO: Fix this, wrap, mobile -->
-    <!-- {#if isHovered && subtitle != ""}
+      <!-- The file itself -->
+      <button class="flex flex-row gap-2 font-semibold" onclick={handleClick}>
+        <span class="flex w-fit z-10 {currentColor} leading-none">
+          {@html currentIcon}
+        </span>
+        {#if name == "work"}
+          <a href={link} class="text-primary-900">{name}</a>
+        {:else}
+          {name}
+        {/if}
+        {#if date != ""}
+          <Time timestamp={date} format="| MMM. YYYY" />
+        {/if}
+      </button>
+      <!-- TODO: Fix this, wrap, mobile -->
+      <!-- {#if isHovered && subtitle != ""}
     <div transition:slide={{ duration: 300 }} class="text-wrap">
       : {subtitle}
     </div>
     {/if} -->
       {#if isHovered || isOpened}
-      <ul
-      transition:slide={{ duration: 300 }}
-      class=""
-      >
-        <span transition:slide={{ delay: 200, duration: 300, axis: "x" }} class="">
-          <FileTags {tech} {topics} />
-        </span>
-        <div class="flex flex-col pl-4">
-        {#if name == "this site" || name == "my work"}
-          <a href={link} target="_blank" rel="noopener noreferrer" class="hover:underline">
-            {subtitle}
-          </a>
-        {:else if name == "Northwestern University" || name == "Relevant Coursework"}
-        {subtitle}
-        {:else if link != ""}
-          <a href={link} class="hover:underline">
-            {subtitle}
-          </a>
-        {/if}
-        </div>
-      </ul>
+        <ul transition:slide={{ duration: 300 }} class="">
+          <span
+            transition:slide={{ delay: 200, duration: 300, axis: "x" }}
+            class=""
+          >
+            <FileTags {tech} {topics} />
+          </span>
+          <div class="flex flex-col pl-4">
+            {#if name == "this site" || name == "my work"}
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:underline"
+              >
+                {subtitle}
+              </a>
+            {:else if name == "Northwestern University" || name == "Relevant Coursework"}
+              {subtitle}
+            {:else if link != ""}
+              <a href={link} class="hover:underline">
+                {subtitle}
+              </a>
+            {/if}
+          </div>
+        </ul>
       {/if}
     </div>
   </div>
@@ -126,16 +144,20 @@
 
 <style lang="postcss">
   div {
-    @apply text-sm
+    @apply text-sm;
   }
   span {
-    @apply flex items-center 
+    @apply flex items-center;
   }
 
   a {
+    @apply hover:text-primary-600;
+  }
+
+  div::a {
     @apply text-primary-600 hover:text-primary-600;
   }
   ul {
-    @apply pt-[0.2em] pl-1 ml-2.5 list-none border-l-2 border-l-primary-400
+    @apply pt-[0.2em] pl-1 ml-2.5 list-none border-l-2 border-l-primary-400;
   }
 </style>
